@@ -38,6 +38,16 @@
       margin-bottom: 10px;
       color: #f5e9dc;
       text-shadow: 0 0 10px rgba(255, 200, 150, 0.2);
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+      }
+      to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+      }
     }
 
     p {
@@ -137,100 +147,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Semen Chupin — Artist</title>
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      height: 100%;
-      overflow-x: hidden;
-      color: #f0eae4;
-    }
-
-    body {
-      background: radial-gradient(circle at 20% 20%, #3a273a, #2c1c2c, #1f0f1f);
-      background-size: 300% 300%;
-      animation: ocean 25s ease-in-out infinite;
-    }
-
-    @keyframes ocean {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .container {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      color: #f5e9dc;
-      text-shadow: 0 0 10px rgba(255, 200, 150, 0.2);
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-      color: #e0d6ca;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      margin: 10px;
-      font-size: 1.1em;
-      color: #f0eae4;
-      border: 2px solid #f0eae4;
-      background: transparent;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background: rgba(255, 255, 255, 0.05);
-      transform: scale(1.05);
-    }
-
-    .btn-red:active {
-      background: #b32020;
-      border-color: #b32020;
-      color: #fff;
-    }
-
-    .btn-yellow:active {
-      background: #e2b800;
-      border-color: #e2b800;
-      color: #fff;
-    }
-
-    .lang-switch {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      font-size: 1em;
-    }
-
-    .lang-switch a {
-      color: #f0eae4;
-      margin-left: 10px;
-      text-decoration: none;
-      border-bottom: 1px dotted #f0eae4;
-    }
-
-    .lang-switch a:hover {
-      color: #e2b800;
-      border-bottom: 1px solid #e2b800;
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #a89f96;
-    }
+    /* Стили такие же, как в предыдущем коде */
   </style>
 </head>
 <body>
@@ -259,9 +176,19 @@
 </body>
 </html>
 
-    
    
 
+   
+  
+
+
+    
+     
+
+
+  
+ 
+   
 
   
 
@@ -273,4 +200,5 @@
      
        
    
+
 
