@@ -1,223 +1,293 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тайная Близость | Secret Intimacy</title>
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            color: #f0f0f0;
-            line-height: 1.7;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-            background: rgba(26, 26, 46, 0.9);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        h1 {
-            color: #ffcc88;
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        h2 {
-            color: #ffcc88;
-            text-align: center;
-            margin: 40px 0 20px;
-        }
-        .subtitle {
-            text-align: center;
-            font-style: italic;
-            color: #d47fa6;
-            margin-bottom: 40px;
-            font-size: 1.2em;
-        }
-        p {
-            margin-bottom: 25px;
-            font-size: 1.1em;
-            text-align: justify;
-        }
-        .highlight {
-            background: linear-gradient(135deg, #2c2c54, #40407a);
-            padding: 25px;
-            border-left: 5px solid #ffcc88;
-            margin: 30px 0;
-            border-radius: 0 10px 10px 0;
-        }
-        .comparison {
-            background: rgba(255, 204, 136, 0.1);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 30px 0;
-            border: 1px solid #ffcc88;
-        }
-        .button {
-            display: block;
-            width: 280px;
-            margin: 40px auto;
-            padding: 18px;
-            text-align: center;
-            background: linear-gradient(135deg, #ffcc88, #ff9f43);
-            color: #1a1a2e;
-            text-decoration: none;
-            border-radius: 35px;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 204, 136, 0.3);
-        }
-        .button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(255, 204, 136, 0.6);
-        }
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.9em;
-            color: #999;
-        }
-        ul {
-            margin-bottom: 25px;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        strong {
-            color: #ffcc88;
-        }
-        .price {
-            text-align: center;
-            font-size: 1.3em;
-            color: #ffcc88;
-            margin: 20px 0;
-            font-weight: bold;
-        }
-        .guarantee {
-            text-align: center;
-            font-style: italic;
-            color: #7a7a7a;
-            margin-top: 30px;
-        }
-        .language-switcher {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .language-btn {
-            background: none;
-            border: 1px solid #ffcc88;
-            padding: 8px 15px;
-            margin: 0 5px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-            color: #ffcc88;
-        }
-        .language-btn:hover {
-            background: rgba(255, 204, 136, 0.2);
-        }
-        .language-content {
-            display: none;
-        }
-        .language-content:first-child {
-            display: block;
-        }
-        .unique-section {
-            background: rgba(255, 204, 136, 0.1);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 30px 0;
-            border: 1px dashed #ffcc88;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Семён Чупин — Художник | Галерея, Видео, Выставки, Курсы</title>
+  <meta name="description" content="Официальный сайт художника Семёна Чупина: галерея картин, видео, выставки, статьи, курсы и заказы. Тёплое пространство искусства и живого знания." />
+  <meta name="theme-color" content="#0f172a" />
+  <meta property="og:title" content="Семён Чупин — Художник" />
+  <meta property="og:description" content="Галерея, видео, выставки, статьи и курсы. Закажите картину или откройте знания мастера." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{
+      --bg: #0b1020;           /* глубокая ночь */
+      --bg-soft: #0f172a;      /* сланцевый */
+      --card: #111827cc;       /* стекло */
+      --text: #e5e7eb;         /* светлый */
+      --muted: #a5b4fc;        /* сиреневый акцент */
+      --accent: #f59e0b;       /* янтарный */
+      --accent-2: #60a5fa;     /* небесный */
+      --ring: #ffffff33;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, system-ui, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 10% -10%, #1f2937 0%, transparent 60%),
+                  radial-gradient(1000px 700px at 110% 10%, #111827 0%, transparent 60%),
+                  var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:22px}
+
+    /* Навбар */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: saturate(140%) blur(8px);
+      background: #0b1020cc;
+      border-bottom:1px solid #33415555;
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand-logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow: var(--shadow)}
+    .brand-title{font-weight:700;letter-spacing:.3px}
+    .nav-links{display:flex;gap:12px;flex-wrap:wrap}
+    .chip{padding:8px 12px;border-radius:999px;background:#111827a6;border:1px solid #33415580}
+    .chip:hover{border-color:#93c5fd80}
+
+    /* Хиро */
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;padding:38px 14px}
+    .hero h1{font-size:clamp(28px,6vw,54px);line-height:1.05;margin:0 0 10px}
+    .hero p{opacity:.9;margin:0 0 20px;font-size:clamp(15px,2.4vw,18px)}
+    .hero-card{position:relative;border-radius:var(--radius);padding:18px;border:1px solid #33415566;background:linear-gradient(180deg,#0f172acc,#0b1020cc);box-shadow:var(--shadow)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid #33415580;background:#0f172a;transition:transform .12s ease, border-color .2s ease, background .2s ease;cursor:pointer}
+    .btn:hover{transform:translateY(-1px);border-color:#93c5fd80}
+    .btn.primary{background:linear-gradient(135deg,#f59e0b,#f97316);color:#0b1020;font-weight:700;border-color:transparent}
+    .btn.secondary{background:#111827d0}
+
+    .hero-art{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid #33415566;min-height:260px;box-shadow:var(--shadow)}
+    .hero-art img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(105%) contrast(102%)}
+
+    /* Сетка карточек */
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(12,1fr)}
+    .card{grid-column: span 6; position:relative; border-radius:var(--radius); padding:18px; border:1px solid #33415566; background:linear-gradient(180deg,#0f172acc,#0b1020cc); box-shadow: var(--shadow); overflow:hidden}
+    .card:hover{border-color:#93c5fd80}
+    .card h3{margin:4px 0 8px;font-size:18px}
+    .card p{margin:0;opacity:.85}
+    .card .icon{width:28px;height:28px;opacity:.92}
+    .card .go{position:absolute;right:14px;bottom:14px;font-size:13px;opacity:.85}
+
+    /* Большие карточки */
+    .span-12{grid-column: span 12}
+    .span-8{grid-column: span 8}
+    .span-4{grid-column: span 4}
+
+    /* Соцсети */
+    .socials{display:flex;gap:10px;flex-wrap:wrap}
+    .socials a{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid #33415580;border-radius:12px;background:#0f172acc}
+    .socials a:hover{border-color:#93c5fd80}
+
+    /* Низ */
+    footer{opacity:.9;padding:30px 14px;color:#cbd5e1}
+    footer small{opacity:.8}
+
+    /* Мобильная адаптация */
+    @media (max-width: 880px){
+      .hero{grid-template-columns:1fr;gap:16px}
+      .nav-links{display:none}
+      .card{grid-column:span 12}
+      .span-8,.span-4{grid-column:span 12}
+    }
+
+    /* Плавающая панель CTA (моб.) */
+    .mobile-cta{position:fixed;left:12px;right:12px;bottom:12px;display:flex;gap:10px;z-index:60}
+    .mobile-cta .btn{flex:1;justify-content:center}
+    @media (min-width: 801px){.mobile-cta{display:none}}
+
+    /* Маленькая анимация для кликов */
+    .btn:active{transform:translateY(0)}
+    .card:active{transform:translateY(0)}
+    .focus-ring:focus{outline:none; box-shadow:0 0 0 4px var(--ring)}
+  </style>
+  <link rel="prefetch" href="gallery.html" />
+  <link rel="prefetch" href="video.html" />
+  <link rel="prefetch" href="exhibitions.html" />
+  <link rel="prefetch" href="articles.html" />
+  <link rel="prefetch" href="shop.html" />
+  <link rel="prefetch" href="about.html" />
+  <link rel="prefetch" href="contacts.html" />
+  <link rel="prefetch" href="documents.html" />
 </head>
 <body>
-    <div class="container">
-        <div class="language-switcher">
-            <button class="language-btn" onclick="showLanguage('ru')">🇷🇺 Русский</button>
-            <button class="language-btn" onclick="showLanguage('en')">🇺🇸 English</button>
-        </div>
-
-        <div id="ru" class="language-content">
-            <h1>Искусство глубокой близости</h1>
-            <div class="subtitle">Знание, которое перевернёт вашу интимную жизнь — и которого нет в интернете</div>
-
-            <h2>Научное подтверждение</h2>
-            <p>Современная нейрофизиология подтверждает: мужское возбуждение — это не только механика, но и химия. В момент правильной стимуляции тело мужчины начинает выделять особые вещества: <em>дофамин</em> (гормон удовольствия), <em>окситоцин</em> (гормон привязанности), <em>вазопрессин</em> (гормон верности) и целый коктейль эндорфинов. Именно поэтому мужчина становится эмоционально зависим от женщины, которая подарила ему новый уровень ощущений.</p>
-
-            <h2>Химия привязанности</h2>
-            <p>Когда мужчина переживает оргазм, активированный через «кнопку», его организм реагирует иначе, чем при обычной стимуляции. В кровь выбрасываются большие дозы <em>окситоцина</em> и <em>вазопрессина</em> — гормонов, которые формируют чувство привязанности и верности. Именно они отвечают за желание быть рядом с одной женщиной снова и снова.</p>
-
-            <div class="highlight">
-                <p>Но есть одно знание — простое, мгновенное и невероятно мощное — которое <strong>не описано ни в одной книге, ни на одном форуме, ни в одном курсе</strong>. Его нет в открытом доступе, потому что те, кто им владеют, берегут его как самый ценный секрет.</p>
-            </div>
-
-            <h2>Почему техника важнее опыта</h2>
-            <p>Ни возраст, ни опытность женщины не играют роли. Даже самая юная девушка, зная этот секрет, способна подарить мужчине опыт, который он никогда не забудет. Все остальные техники — глубокий минет, двойная стимуляция, «игра языком» или дыхательные практики — становятся лишь дополнением, но не ядром.</p>
-
-            <h2>Главное отличие</h2>
-            <p>Нужно чётко подчеркнуть: <strong>эта зона не имеет отношения ни к анусу, ни к простате, ни к промежности</strong>. Все эти участки давно изучены. Секретная «кнопка» расположена иначе, и именно поэтому её сила уникальна.</p>
-
-            <div class="comparison">
-                <p>Один раз прикоснувшись к ней в момент близости, женщина становится «наркотиком» для мужчины. Его тело само формирует зависимость от этой связи, и это уже не обратимо.</p>
-            </div>
-
-            <div class="price">Цена: 50 000 рублей | $550</div>
-            <div class="guarantee">Гарантия: если в течение 3 дней вы не увидите преобразующего эффекта — я верну every penny</div>
-
-            <a href="https://t.me/tribute/app?startapp=sAui" class="button">🔑 Получить секрет</a>
-        </div>
-
-        <div id="en" class="language-content">
-            <h1>The Art of Deep Intimacy</h1>
-            <div class="subtitle">Knowledge that will transform your intimate life — and that isn't available anywhere online</div>
-
-            <h2>Scientific Evidence</h2>
-            <p>Modern neurophysiology proves: male arousal is not only mechanics, but also chemistry. During the right stimulation, the male body releases powerful substances: <em>dopamine</em> (pleasure hormone), <em>oxytocin</em> (bonding hormone), <em>vasopressin</em> (loyalty hormone), and a cascade of endorphins. That is why a man becomes emotionally dependent on the woman who gave him this new level of experience.</p>
-
-            <h2>Chemistry of Bonding</h2>
-            <p>When a man reaches orgasm through activation of the hidden “button,” his body responds differently than during ordinary stimulation. Levels of <em>oxytocin</em> and <em>vasopressin</em> rise sharply, creating a deep sense of bonding and loyalty. These are the very molecules that make him crave to return to the same woman again and again.</p>
-
-            <div class="highlight">
-                <p>But there is one knowledge — simple, instant, and incredibly powerful — that <strong>isn't described in any book, forum, or course</strong>. It's not available publicly because those who possess it guard it as their most valuable secret.</p>
-            </div>
-
-            <h2>Why Skill Is Not Experience</h2>
-            <p>It is not age or practice that matters. Even the youngest woman, knowing this secret, can give a man a memory that will mark him forever. Techniques like deep throat, dual stimulation, tongue play or rhythm control can enhance pleasure, but they never reprogram the nervous system itself.</p>
-
-            <h2>The True Distinction</h2>
-            <p>To avoid misunderstanding: <strong>this secret zone is not the anus, not the prostate, not the perineum</strong>. Those areas have long been studied. The hidden “button” is different, which is why its effect is unlike anything else.</p>
-
-            <div class="comparison">
-                <p>One touch at the right moment — and the man is forever changed. His body remembers. His mind bonds. His soul cannot let go. The woman becomes his “addiction,” but in the most sacred and intimate sense of the word.</p>
-            </div>
-
-            <div class="price">Price: $550 | 50 000 RUB</div>
-            <div class="guarantee">Guarantee: If within 3 days you don't see a transformative effect — I'll return every penny</div>
-
-            <a href="https://t.me/tribute/app?startapp=sAui" class="button">🔑 Unlock the Secret</a>
-        </div>
-
-        <div class="footer">
-            © This isn't just knowledge — it's power. Use it wisely.
-        </div>
+  <!-- Навбар -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="./" aria-label="На главную">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <div class="brand-title">Семён Чупин · Художник</div>
+      </a>
+      <nav class="nav-links" aria-label="Быстрые ссылки">
+        <a class="chip" href="gallery.html">Галерея</a>
+        <a class="chip" href="video.html">Видео</a>
+        <a class="chip" href="exhibitions.html">Выставки</a>
+        <a class="chip" href="articles.html">Статьи</a>
+        <a class="chip" href="shop.html">Курсы / Заказ</a>
+        <a class="chip" href="about.html">Обо мне</a>
+      </nav>
     </div>
+  </header>
 
-    <script>
-        function showLanguage(lang) {
-            document.querySelectorAll('.language-content').forEach(content => {
-                content.style.display = 'none';
-            });
-            document.getElementById(lang).style.display = 'block';
-        }
-    </script>
+  <!-- Хиро блок -->
+  <section class="container hero">
+    <div class="hero-card">
+      <h1>Живопись, огонь и дыхание смысла</h1>
+      <p>Официальное пространство моего искусства: картины, история создания, видео из мастерской, выставки и знание, которым я делюсь с миром. Добро пожаловать.</p>
+      <div class="cta">
+        <a class="btn primary focus-ring" href="shop.html#order" aria-label="Заказать картину">
+          <!-- кисть -->
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.7 5.3a1 1 0 0 1 1.4 0l2.6 2.6a1 1 0 0 1 0 1.4l-8.3 8.3a5 5 0 0 1-3.5 1.5H6a2 2 0 0 1-2-2v-.9a5 5 0 0 1 1.5-3.5l8.3-8.4z"></path></svg>
+          Заказать картину
+        </a>
+        <a class="btn secondary focus-ring" href="shop.html#course" aria-label="Купить курс и знания">
+          <!-- книга -->
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14a1 1 0 0 1-1.4.9L15 18.6l-2.6 1.3a1 1 0 0 1-.9 0L9 18.6 6.4 19.9A1 1 0 0 1 5 19V5z"></path></svg>
+          Купить курс
+        </a>
+        <a class="btn focus-ring" href="gallery.html" aria-label="Перейти в галерею">Смотреть галерею</a>
+      </div>
+    </div>
+    <figure class="hero-art" aria-label="Превью картины">
+      <img src="images/hero.jpg" alt="Картина Семёна Чупина" loading="lazy" />
+    </figure>
+  </section>
+
+  <!-- Разделы карточками -->
+  <main class="container">
+    <div class="grid">
+      <a class="card span-8 focus-ring" href="gallery.html">
+        <div style="display:flex;gap:12px;align-items:center">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5zm4 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm10 8l-4.5-6-3.5 4.5-2.5-3L4 17h14z"/></svg>
+          <div>
+            <h3>Галерея картин</h3>
+            <p>Фотографии работ, крупные планы фактуры, история каждой картины.</p>
+          </div>
+        </div>
+        <div class="go">Открыть →</div>
+      </a>
+
+      <a class="card span-4 focus-ring" href="video.html">
+        <div style="display:flex;gap:12px;align-items:center">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1.5l3-1.5a1 1 0 0 1 1.5.9v10.2a1 1 0 0 1-1.5.9l-3-1.5V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/></svg>
+          <div>
+            <h3>Видео</h3>
+            <p>Мастерская, процесс, передачи и интервью.</p>
+          </div>
+        </div>
+        <div class="go">Смотреть →</div>
+      </a>
+
+      <a class="card span-4 focus-ring" href="exhibitions.html">
+        <div style="display:flex;gap:12px;align-items:center">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16v2H4V4zm1 4h14v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8zm3 2v8h2v-8H8zm6 0v8h2v-8h-2z"/></svg>
+          <div>
+            <h3>Выставки</h3>
+            <p>Афиши, фотографии, заметки прессы и отзывы.</p>
+          </div>
+        </div>
+        <div class="go">История →</div>
+      </a>
+
+      <a class="card span-8 focus-ring" href="articles.html">
+        <div style="display:flex;gap:12px;align-items:center">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H8l-4-4V4a1 1 0 0 1 1-1zm3 5h6v2H9V8zm0 4h6v2H9v-2z"/></svg>
+          <div>
+            <h3>Статьи и публикации</h3>
+            <p>Ссылки на СМИ и материалы о моём пути в искусстве.</p>
+          </div>
+        </div>
+        <div class="go">Читать →</div>
+      </a>
+
+      <a class="card span-6 focus-ring" href="shop.html">
+        <div style="display:flex;gap:12px;align-items:center">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 6h12l-1 12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 6zm3-4h6v2H9V2z"/></svg>
+          <div>
+            <h3>Курсы и заказы</h3>
+            <p>Трибьют и доступ к знаниям. Индивидуальный заказ картины.</p>
+          </div>
+        </div>
+        <div class="go">Перейти →</div>
+      </a>
+
+      <a class="card span-6 focus-ring" href="documents.html">
+        <div style="display:flex;gap:12px;align-items:center">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 1v5h5"/></svg>
+          <div>
+            <h3>Документы и награды</h3>
+            <p>Подтверждение статуса: стипендии, публикации, дипломы.</p>
+          </div>
+        </div>
+        <div class="go">Смотреть →</div>
+      </a>
+
+      <a class="card span-6 focus-ring" href="about.html">
+        <div style="display:flex;gap:12px;align-items:center">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm-9 9a9 9 0 1 1 18 0"/></svg>
+          <div>
+            <h3>Обо мне</h3>
+            <p>Путь, принципы, мастерская, контакт для сотрудничества.</p>
+          </div>
+        </div>
+        <div class="go">Узнать →</div>
+      </a>
+
+      <a class="card span-6 focus-ring" href="contacts.html">
+        <div style="display:flex;gap:12px;align-items:center">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 8a8 8 0 1 1-9 9H4a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h4a8 8 0 0 1 12-4z"/></svg>
+          <div>
+            <h3>Контакты</h3>
+            <p>Соцсети, e‑mail, мессенджеры — для связи и заказа.</p>
+          </div>
+        </div>
+        <div class="go">Связаться →</div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Соцсети и подвал -->
+  <section class="container" aria-label="Социальные сети">
+    <div class="card span-12" style="display:block">
+      <h3 style="margin:6px 0 14px">Я в социальных сетях</h3>
+      <div class="socials">
+        <a href="https://instagram.com/your_profile" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm6-2a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/></svg>
+          Instagram
+        </a>
+        <a href="https://youtube.com/@your_channel" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7s-.2-1.5-.8-2.2c-.8-.8-1.7-.8-2.1-.9C17.9 3.5 12 3.5 12 3.5h0s-5.9 0-8.1.4c-.4 0-1.3.1-2.1.9C1.2 5.5 1 7 1 7S.8 8.8.8 10.6v2.8C.8 15.2 1 17 1 17s.2 1.5.8 2.2c.8.8 1.9.8 2.4.9C6.9 20.6 12 20.6 12 20.6s5.9 0 8.1-.4c.4-.1 1.3-.1 2.1-.9.6-.7.8-2.2.8-2.2s.2-1.8.2-3.6v-2.8C23.2 8.8 23 7 23 7zM9.8 15.5V8.9l6.1 3.3-6.1 3.3z"/></svg>
+          YouTube
+        </a>
+        <a href="https://vk.com/your_profile" target="_blank" rel="noopener" aria-label="VK">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 6h4.1c.2 3.7 1.7 6 4.6 7.1V6h3.9v4.2c1.5-.2 3.2-1.9 3.7-4.2H24c-.3 2.1-1.5 3.8-3.3 5 1.9 1 3.3 2.7 3.8 5h-4.2c-.6-2-2.2-3.6-4-3.8V16h-4v-3.8C10.4 12.4 8.9 14.1 8 16H3c.9-2.1 2.7-3.8 4.6-5-1.8-1.2-3-2.9-3.6-5z"/></svg>
+          VK
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container">
+    <small>© <span id="year"></span> Семён Чупин. Все права защищены. · Сайт создан с любовью.</small>
+  </footer>
+
+  <!-- Мобильная панель CTA -->
+  <div class="mobile-cta" role="group" aria-label="Действия">
+    <a class="btn primary" href="shop.html#order">Заказать картину</a>
+    <a class="btn secondary" href="shop.html#course">Купить курс</a>
+  </div>
+
+  <script>
+    // Текущий год в подвале
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
