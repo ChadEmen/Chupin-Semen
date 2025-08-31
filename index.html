@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -14,7 +15,7 @@
       color: #f0eae4;
     }
 
-    /* Фон с плавным движением */
+    /* Фон с плавным движением океана */
     body {
       background: radial-gradient(circle at 20% 20%, #3a273a, #2c1c2c, #1f0f1f);
       background-size: 300% 300%;
@@ -27,7 +28,6 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Центрирование контента */
     .container {
       text-align: center;
       padding: 60px 20px;
@@ -38,16 +38,6 @@
       margin-bottom: 10px;
       color: #f5e9dc;
       text-shadow: 0 0 10px rgba(255, 200, 150, 0.2);
-      animation: glow 1.5s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
-      }
-      to {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
-      }
     }
 
     p {
@@ -76,19 +66,19 @@
       transform: scale(1.05);
     }
 
-    .btn-red:active {
-      background: #b32020;
+    .btn:active {
+      background: #b32020; /* краснеет при нажатии */
       border-color: #b32020;
       color: #fff;
     }
 
     .btn-yellow:active {
-      background: #e2b800;
-      border-color: #e2b800;
-      color: #fff;
+      background: #f0c040;
+      border-color: #f0c040;
+      color: #000;
     }
 
-    /* Переключатель языков */
+    /* Переключатель языка */
     .lang-switch {
       position: fixed;
       top: 20px;
@@ -98,14 +88,15 @@
 
     .lang-switch a {
       color: #f0eae4;
-      margin-left: 10px;
+      margin: 0 8px;
       text-decoration: none;
-      border-bottom: 1px dotted #f0eae4;
+      border-bottom: 1px dashed #f0eae4;
+      transition: 0.3s;
     }
 
     .lang-switch a:hover {
-      color: #e2b800;
-      border-bottom: 1px solid #e2b800;
+      color: #f0c040;
+      border-color: #f0c040;
     }
 
     footer {
@@ -117,22 +108,21 @@
 </head>
 <body>
   <div class="lang-switch">
-    <a href="index.html">RU</a> | 
-    <a href="index-en.html">EN</a>
+    <a href="index.html">RU</a> | <a href="index-en.html">EN</a>
   </div>
 
   <div class="container">
     <h1>Чупин Семён</h1>
     <p>Выдающийся деятель культуры и искусства</p>
 
-    <a href="gallery.html" class="btn btn-red">Галерея</a>
-    <a href="video.html" class="btn btn-red">Видео</a>
-    <a href="exhibitions.html" class="btn btn-red">Выставки</a>
-    <a href="articles.html" class="btn btn-red">Статьи</a>
+    <a href="gallery.html" class="btn btn-yellow">Галерея</a>
+    <a href="video.html" class="btn">Видео</a>
+    <a href="exhibitions.html" class="btn">Выставки</a>
+    <a href="articles.html" class="btn">Статьи</a>
     <a href="shop.html" class="btn btn-yellow">Курсы / Заказ</a>
-    <a href="documents.html" class="btn btn-red">Документы</a>
-    <a href="about.html" class="btn btn-red">Обо мне</a>
-    <a href="contacts.html" class="btn btn-red">Контакты</a>
+    <a href="documents.html" class="btn">Документы</a>
+    <a href="about.html" class="btn">Обо мне</a>
+    <a href="contacts.html" class="btn">Контакты</a>
 
     <footer>
       © 2025 Чупин Семён
@@ -140,43 +130,11 @@
   </div>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semen Chupin — Artist</title>
-  <style>
-    /* Стили такие же, как в предыдущем коде */
-  </style>
-</head>
-<body>
-  <div class="lang-switch">
-    <a href="index.html">RU</a> | 
-    <a href="index-en.html">EN</a>
-  </div>
+      
+    
+  
+ 
 
-  <div class="container">
-    <h1>Semen Chupin</h1>
-    <p>Outstanding figure of culture and art</p>
-
-    <a href="gallery.html" class="btn btn-red">Gallery</a>
-    <a href="video.html" class="btn btn-red">Videos</a>
-    <a href="exhibitions.html" class="btn btn-red">Exhibitions</a>
-    <a href="articles.html" class="btn btn-red">Articles</a>
-    <a href="shop.html" class="btn btn-yellow">Courses / Order</a>
-    <a href="documents.html" class="btn btn-red">Documents</a>
-    <a href="about.html" class="btn btn-red">About Me</a>
-    <a href="contacts.html" class="btn btn-red">Contacts</a>
-
-    <footer>
-      © 2025 Semen Chupin
-    </footer>
-  </div>
-</body>
-</html>
-
-   
 
    
   
@@ -200,5 +158,6 @@
      
        
    
+
 
 
