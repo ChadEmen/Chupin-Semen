@@ -308,6 +308,78 @@ main h1 {
   color: #FF6A00; /* яркий оранжевый */
   text-shadow: 0 0 10px #FF8C00, 0 0 20px #FFA500, 0 0 30px #FF4500;
 }
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+}
+
+header {
+  padding: 10px;
+  background: #222;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.video-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.video-item a {
+  display: block;
+  text-align: center;
+  padding: 25px;
+  margin: 10px auto;
+  max-width: 500px;
+  background: linear-gradient(145deg, #111, #333);
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 15px;
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.6), -5px -5px 12px rgba(255,255,255,0.1);
+  transition: transform 0.3s, box-shadow 0.3s, color 0.2s, text-shadow 0.3s;
+
+  /* Металлический блестящий текст */
+  background: linear-gradient(45deg, #e6e6e6, #fff, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.video-item a:hover {
+  transform: translateY(-5px);
+  box-shadow: 7px 7px 14px rgba(0,0,0,0.7), -7px -7px 14px rgba(255,255,255,0.1);
+  background: linear-gradient(45deg, #fff, #e6e6e6, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(255,255,255,0.8);
+}
+
+.video-item a:active {
+  color: #FF6A00; /* яркий оранжевый */
+  text-shadow: 0 0 10px #FF8C00, 0 0 20px #FFA500, 0 0 30px #FF4500;
+}
+
 
 
 
