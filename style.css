@@ -240,6 +240,29 @@ main h1 {
   background: linear-gradient(145deg, #222, #444);
   color: #FFEA00; /* при наведении чуть ярче */
 }
+.video-item a {
+  display: block;
+  text-align: center;
+  padding: 25px;
+  margin: 10px auto;
+  max-width: 500px;
+  background: linear-gradient(145deg, #111, #333);
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 15px;
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.6), -5px -5px 12px rgba(255,255,255,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  /* Металлический блестящий текст */
+  background: linear-gradient(45deg, #ccc, #fff, #eee, #ddd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 
 
