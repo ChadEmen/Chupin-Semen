@@ -1,20 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Галерея — Семён Чупин</title>
-  <link rel="stylesheet" href="style.css"> <!-- если создадим общий стиль -->
+  <meta charset="UTF-8">
+  <title>Галерея картин</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 20px 0;
+      color: #333;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .links {
+      margin: 30px 0;
+    }
+    .links a button {
+      background-color: #333;
+      color: white;
+      padding: 12px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+    .links a button:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <a href="index.html">← Назад на главную</a>
-  </header>
-  <main>
-    <h1>Галерея картин</h1>
-    <div class="gallery-grid">
-      <!-- сюда потом вставим фото картин -->
-    </div>
-  </main>
+  <h1>Галерея моих картин</h1>
+
+  <div class="gallery">
+    <img src="images/hero.jpg" alt="Картина 1">
+    <img src="images/kartina2.jpg" alt="Картина 2">
+    <img src="images/kartina3.jpg" alt="Картина 3">
+    <img src="images/kartina4.jpg" alt="Картина 4">
+    <img src="images/kartina5.jpg" alt="Картина 5">
+    <img src="images/kartina6.jpg" alt="Картина 6">
+    <img src="images/kartina7.jpg" alt="Картина 7">
+  </div>
+
+  <div class="links">
+    <a href="https://photos.app.goo.gl/K19BbUJkFWE6oAFr9" target="_blank">
+      <button>Альбом Google Фото №1</button>
+    </a>
+    <a href="https://photos.app.goo.gl/1tbjqhD7pKDn3NCp7" target="_blank">
+      <button>Альбом Google Фото №2</button>
+    </a>
+    <a href="https://vk.com/album39116321_00" target="_blank">
+      <button>Альбом ВКонтакте</button>
+    </a>
+  </div>
 </body>
 </html>
+
