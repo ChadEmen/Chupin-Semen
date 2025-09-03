@@ -701,6 +701,41 @@ main h1 {
   transition: all 0.3s ease;
   animation: vibrate 1.2s infinite; /* пульсация */
 }
+/* YouTube кнопка, как все остальные */
+.btn.yt {
+  background: linear-gradient(45deg, #FF0000, #FF5555, #FF0000);
+  color: #fff;
+  padding: 18px 36px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+  animation: vibrate 1.2s infinite; /* пульсация */
+}
+
+/* Анимация вибрации */
+@keyframes vibrate {
+  0% { transform: translate(0,0) rotate(0deg); }
+  25% { transform: translate(2px,-2px) rotate(-1deg); }
+  50% { transform: translate(-2px,2px) rotate(1deg); }
+  75% { transform: translate(2px,2px) rotate(0deg); }
+  100% { transform: translate(0,0) rotate(-1deg); }
+}
+
+/* Hover и активное нажатие */
+.btn.yt:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+.btn.yt:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+}
+
 
 
 
