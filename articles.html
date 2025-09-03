@@ -1,9 +1,105 @@
-<div class="links">
-  <h2>Репортажи о выставке</h2>
-  <a href="https://seyminfo.ru/v-kurske-otkrylas-vystavka-kartin-semyona-chupina-moyo.html" target="_blank" class="btn report insta">Сейминфо</a>
-  <a href="https://kursk-news.ru/other/2025/05/29/612406.html" target="_blank" class="btn report tg">Курск-Ньюс</a>
-  <a href="https://dzen.ru/news/story/4640ae99-c8aa-5dfb-81f4-b2a62ad49268" target="_blank" class="btn report vk">Дзен</a>
-  <a href="https://kursk.bezformata.com/listnews/tvortca-semyona-chupina/146728036/?amp=1" target="_blank" class="btn report ok">Без Формата</a>
-  <a href="https://vipvkurske.com/articles/2998/" target="_blank" class="btn report yt">VIP в Курске</a>
-  <a href="https://takt-tv.ru/takt-novosti/kurskiy-khudozhnik-predstavil-vystavku-kartin-s-prostymi-nazvaniyami-i-glubokim-smyslom" target="_blank" class="btn report insta">Takt TV</a>
-</div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Репортажи — Семён Чупин</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin: 40px 0 20px;
+      font-size: 32px;
+      color: #ffcc70;
+      text-shadow: 0 0 10px rgba(255,200,100,0.9);
+    }
+
+    .reports {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .btn-report {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Градиенты с переливом */
+    .insta { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); }
+    .tg { background: linear-gradient(45deg,#00aced,#0088cc); }
+    .vk { background: linear-gradient(45deg,#4c75a3,#81a8c7); }
+    .ok { background: linear-gradient(45deg,#ee8208,#ffb347); }
+    .yt { background: linear-gradient(45deg,#FF0000,#FF6347); }
+    .dzen { background: linear-gradient(45deg,#ffde00,#f7a600); }
+    .takt { background: linear-gradient(45deg,#ff4e50,#f9d423); }
+
+    /* Пульсация разная скорость и амплитуда */
+    .insta { animation: pulse1 2s infinite; }
+    .tg { animation: pulse2 2.5s infinite; }
+    .vk { animation: pulse3 3s infinite; }
+    .ok { animation: pulse4 2.2s infinite; }
+    .yt { animation: pulse5 2.8s infinite; }
+    .dzen { animation: pulse6 3.2s infinite; }
+    .takt { animation: pulse7 2.6s infinite; }
+
+    @keyframes pulse1 { 0% {transform: scale(1);} 50% {transform: scale(1.12);} 100% {transform: scale(1);} }
+    @keyframes pulse2 { 0% {transform: scale(1);} 50% {transform: scale(1.10);} 100% {transform: scale(1);} }
+    @keyframes pulse3 { 0% {transform: scale(1);} 50% {transform: scale(1.14);} 100% {transform: scale(1);} }
+    @keyframes pulse4 { 0% {transform: scale(1);} 50% {transform: scale(1.11);} 100% {transform: scale(1);} }
+    @keyframes pulse5 { 0% {transform: scale(1);} 50% {transform: scale(1.13);} 100% {transform: scale(1);} }
+    @keyframes pulse6 { 0% {transform: scale(1);} 50% {transform: scale(1.15);} 100% {transform: scale(1);} }
+    @keyframes pulse7 { 0% {transform: scale(1);} 50% {transform: scale(1.12);} 100% {transform: scale(1);} }
+
+    /* Вибрация при нажатии */
+    .btn-report:active { animation: vibrate 0.15s infinite; }
+    @keyframes vibrate {
+      0% { transform: translate(0,0) rotate(0deg); }
+      20% { transform: translate(-2px,2px) rotate(-1deg); }
+      40% { transform: translate(2px,-2px) rotate(1deg); }
+      60% { transform: translate(-2px,2px) rotate(-1deg); }
+      80% { transform: translate(2px,-2px) rotate(1deg); }
+      100% { transform: translate(0,0) rotate(0deg); }
+    }
+
+    /* Светящееся сияние при наведении */
+    .btn-report:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(255,255,255,0.4);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Репортажи о выставках</h1>
+
+  <div class="reports">
+    <a href="https://seyminfo.ru/v-kurske-otkrylas-vystavka-kartin-semyona-chupina-moyo.html" target="_blank" class="btn-report insta">Сейминфо — Выставка картин</a>
+    <a href="https://kursk-news.ru/other/2025/05/29/612406.html" target="_blank" class="btn-report tg">Kursk News — Репортаж</a>
+    <a href="https://dzen.ru/news/story/4640ae99-c8aa-5dfb-81f4-b2a62ad49268" target="_blank" class="btn-report dzen">Дзен — Статья</a>
+    <a href="https://kursk.bezformata.com/listnews/tvortca-semyona-chupina/146728036/?amp=1" target="_blank" class="btn-report vk">Без Формата — Репортаж</a>
+    <a href="https://vipvkurske.com/articles/2998/" target="_blank" class="btn-report ok">VIP в Курске — Репортаж</a>
+    <a href="https://takt-tv.ru/takt-novosti/kurskiy-khudozhnik-predstavil-vystavku-kartin-s-prostymi-nazvaniyami-i-glubokim-smyslom" target="_blank" class="btn-report takt">Takt TV — Репортаж</a>
+    <a href="https://seyminfo.ru/v-kurske-otkrylas-vystavka-kartin-semyona-chupina-moyo.html" target="_blank" class="btn-report yt">Сейминфо — Повторная ссылка</a>
+  </div>
+
+</body>
+</html>
