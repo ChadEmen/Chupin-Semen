@@ -258,10 +258,7 @@ main h1 {
   box-shadow: 5px 5px 12px rgba(0,0,0,0.6), -5px -5px 12px rgba(255,255,255,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 
-  /* Металлический блестящий текст */
-  background: linear-gradient(45deg, #ccc, #fff, #eee, #ddd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ 
 }
 .video-item a:hover {
   transform: translateY(-5px);
@@ -287,11 +284,7 @@ main h1 {
   box-shadow: 5px 5px 12px rgba(0,0,0,0.6), -5px -5px 12px rgba(255,255,255,0.1);
   transition: transform 0.3s, box-shadow 0.3s, color 0.2s, text-shadow 0.3s;
 
-  /* Блестящий серебряный текст */
-  background: linear-gradient(45deg, #e6e6e6, #fff, #ccc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+ 
 }
 
 .video-item a:hover {
@@ -458,6 +451,40 @@ main h1 {
   75% { transform: translate(2px,2px) rotate(0deg); }
   100% { transform: translate(0,0) rotate(-1deg); }
 }
+/* Кнопки репортажей в стиле сайта */
+.btn.report {
+  padding: 15px 30px;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Разная вибрация при наведении */
+.btn.report:hover {
+  animation: vibrate 0.2s infinite;
+}
+
+/* Индивидуальные цвета (можно менять) */
+.btn.report.insta { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); }
+.btn.report.tg { background: #0088cc; }
+.btn.report.vk { background: #4c75a3; }
+.btn.report.ok { background: #ee8208; }
+.btn.report.yt { background: #FF0000; }
+
+/* Анимация вибрации 🔥 */
+@keyframes vibrate {
+  0% { transform: translate(0,0) rotate(0deg); }
+  25% { transform: translate(2px,-2px) rotate(-1deg); }
+  50% { transform: translate(-2px,2px) rotate(1deg); }
+  75% { transform: translate(2px,2px) rotate(0deg); }
+  100% { transform: translate(0,0) rotate(-1deg); }
+}
+
 
 
 
