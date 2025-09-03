@@ -396,6 +396,38 @@ main h1 {
   background: #444;
   transform: translateY(-2px);
 }
+/* Общий стиль кнопок */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Вибрация кнопки */
+@keyframes vibrate {
+  0% { transform: translate(0,0) rotate(0deg); }
+  25% { transform: translate(2px,-2px) rotate(-1deg); }
+  50% { transform: translate(-2px,2px) rotate(1deg); }
+  75% { transform: translate(2px,2px) rotate(0deg); }
+  100% { transform: translate(0,0) rotate(-1deg); }
+}
+
+.btn:hover {
+  animation: vibrate 0.2s infinite;
+}
+
+/* Специально для кнопки галереи */
+.btn-gal {
+  background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
 
 
 
