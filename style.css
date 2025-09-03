@@ -688,6 +688,20 @@ main h1 {
   transform: translateY(-5px) scale(1.05);
   box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
+  background: linear-gradient(45deg, #ff0000, #ff4444);
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+  animation: vibrate 1.2s infinite; /* пульсация */
+}
+
 
 
 
