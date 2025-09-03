@@ -45,7 +45,8 @@ h1 {
 }
 .video-item a {
   ...
-  font-family: 'Playfair Display', serif;
+  font-family: 'Great Vibes', cursive;
+: 'Playfair Display', serif;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -379,6 +380,7 @@ main h1 {
   color: #FF6A00; /* яркий оранжевый */
   text-shadow: 0 0 10px #FF8C00, 0 0 20px #FFA500, 0 0 30px #FF4500;
 }
+
 
 
 
