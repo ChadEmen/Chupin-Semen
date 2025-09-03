@@ -484,6 +484,48 @@ main h1 {
   75% { transform: translate(2px,2px) rotate(0deg); }
   100% { transform: translate(0,0) rotate(-1deg); }
 }
+.heart-btn {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255,0,0,0.6);
+  animation: heartbeat 1.2s infinite;
+  transition: all 0.3s ease;
+}
+
+.heart-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 30px rgba(255,0,0,0.9);
+  animation: vibrate 0.15s infinite;
+}
+
+.heart-btn:active {
+  box-shadow: 0 0 40px rgba(255,0,0,1), 0 0 80px rgba(255,80,0,1);
+}
+
+/* Пульсация сердца */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  40% { transform: scale(0.95); }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Вибрация */
+@keyframes vibrate {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(2px,-2px); }
+  50% { transform: translate(-2px,2px); }
+  75% { transform: translate(2px,2px); }
+  100% { transform: translate(0,0); }
+}
+
 
 
 
