@@ -576,6 +576,44 @@ main h1 {
   0% { transform: rotate(25deg) translateX(-150%); }
   100% { transform: rotate(25deg) translateX(150%); }
 }
+.heart-btn {
+  display: inline-block;
+  background: radial-gradient(circle at 30% 30%, #ff4d6d, #d60042);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(214, 0, 66, 0.6);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.heart-btn::before {
+  content: "❤";
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.heart-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(214, 0, 66, 0.8);
+}
+
+/* пульсация */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.heart-btn {
+  animation: pulse 1.5s infinite;
+}
+
 
 
 
