@@ -6,60 +6,93 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #fdfdfd;
+      background: #111;
+      color: white;
       margin: 0;
       padding: 0;
       text-align: center;
     }
     h1 {
       margin: 20px 0;
-      color: #333;
+      color: #ffcc70;
+      text-shadow: 0 0 10px rgba(255,200,100,0.9);
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
       padding: 20px;
     }
-    .gallery img {
+
+    .gallery img, .gallery video {
       width: 100%;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
       transition: transform 0.3s;
+      cursor: pointer;
     }
-    .gallery img:hover {
+
+    .gallery img:hover, .gallery video:hover {
       transform: scale(1.05);
+      animation: vibrate 0.3s infinite;
     }
+
+    @keyframes vibrate {
+      0% { transform: translate(0,0) rotate(0deg); }
+      25% { transform: translate(2px,-2px) rotate(-1deg); }
+      50% { transform: translate(-2px,2px) rotate(1deg); }
+      75% { transform: translate(2px,2px) rotate(0deg); }
+      100% { transform: translate(0,0) rotate(-1deg); }
+    }
+
     .links {
       margin: 30px 0;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:15px;
     }
-    .links a button {
-      background-color: #333;
-      color: white;
-      padding: 12px 20px;
-      margin: 10px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s;
-    }
-    .links a button:hover {
-      background-color: #555;
-    }
-    body {
-  background-color: black;
-  color: white;
-}
-   
 
+    .links a, .links button {
+      text-decoration: none;
+    }
+
+    .links button {
+      padding: 14px 28px;
+      font-size:16px;
+      font-weight:bold;
+      border:none;
+      border-radius:12px;
+      cursor:pointer;
+      color:#fff;
+      transition: all 0.3s;
+      animation: vibrate 1s infinite;
+    }
+
+    .links button:hover {
+      transform: scale(1.1);
+    }
+
+    /* 🎨 Разноцветные кнопки */
+    .google1 { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); }
+    .google2 { background: linear-gradient(45deg,#ff416c,#ff4b2b); }
+    .vk { background: #4c75a3; }
+    .yt { background: #FF0000; }
+
+    /* 💛 Купить курс */
+    .buy-course {
+      background: linear-gradient(45deg,#00ffcc,#00ccff);
+      animation: vibrate 0.2s infinite;
+    }
 
   </style>
 </head>
 <body>
-  <h1>Галерея моих картин</h1>
+  <h1>Галерея моих картин и видео</h1>
 
   <div class="gallery">
+    <!-- Картинки -->
     <img src="images/hero.jpg" alt="Картина 1">
     <img src="images/kartina2.jpg" alt="Картина 2">
     <img src="images/kartina3.jpg" alt="Картина 3">
@@ -73,27 +106,25 @@
     <img src="images/kartina11.jpg" alt="Картина 11">
     <img src="images/kartina12.jpg" alt="Картина 12">
     <img src="images/kartina13.jpg" alt="Картина 13">
+
+    <!-- Видео -->
+    <video controls>
+      <source src="videos/video1.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+    <video controls>
+      <source src="videos/video2.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
   </div>
 
   <div class="links">
-    
-   <a href="https://photos.app.goo.gl/K19BbUJkFWE6oAFr9" target="_blank">
-      <button>Альбом Google Фото №1</button>
-    </a>
-    <a href="https://photos.app.goo.gl/1tbjqhD7pKDn3NCp7" target="_blank">
-      <button>Альбом Google Фото №2</button>
-    </a>
-    <a href="https://vk.com/album39116321_00" target="_blank">
-      <button>Альбом ВКонтакте</button>
-    </a>
+    <a href="https://photos.app.goo.gl/K19BbUJkFWE6oAFr9" target="_blank"><button class="google1">Альбом Google Фото №1</button></a>
+    <a href="https://photos.app.goo.gl/1tbjqhD7pKDn3NCp7" target="_blank"><button class="google2">Альбом Google Фото №2</button></a>
+    <a href="https://vk.com/album39116321_00" target="_blank"><button class="vk">Альбом ВКонтакте</button></a>
+    <a href="https://youtube.com/@chademen1979?si=DR7TZt7OQPdWxfEV" target="_blank"><button class="yt">Видео на YouTube</button></a>
+    <button class="buy-course">💛 Купить курс</button>
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
 
