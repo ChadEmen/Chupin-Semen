@@ -380,6 +380,23 @@ main h1 {
   color: #FF6A00; /* яркий оранжевый */
   text-shadow: 0 0 10px #FF8C00, 0 0 20px #FFA500, 0 0 30px #FF4500;
 }
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #222; /* цвет кнопки */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 18px;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
+
 
 
 
