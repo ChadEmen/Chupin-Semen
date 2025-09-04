@@ -753,6 +753,14 @@ main h1 {
   90% { transform: translate(2px,-2px) rotate(1deg); }
   100% { transform: translate(0,0) rotate(0deg); }
 }
+.ok { background: linear-gradient(45deg,#ff4e50,#f9d423); animation: pulseBack 2.5s infinite; }
+
+@keyframes pulseBack {
+  0% { transform: scale(1);}
+  50% { transform: scale(1.13);}
+  100% { transform: scale(1);}
+}
+
 
 
 
