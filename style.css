@@ -760,6 +760,33 @@ main h1 {
   50% { transform: scale(1.13);}
   100% { transform: scale(1);}
 }
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Семён Чупин — Член профессионального союза Художников России</title>
+  <style>
+    .btn-report.tg {
+      display: inline-block;
+      padding: 4px 8px;
+      font-size: 12px;
+      color: #fff;
+      background-color: #0077b6;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-report.tg:hover {
+      background-color: #023e8a;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align:right; margin:10px;">
+    <a href="index_en.html" class="btn-report tg">🇬🇧 English</a>
+  </div>
+
 
 
 
