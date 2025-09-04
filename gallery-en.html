@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Art Gallery — Semyon Chupin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: 32px;
+      color: #ffcc70;
+      text-shadow: 0 0 10px rgba(255,200,100,0.9);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .links {
+      margin: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Color gradients */
+    .google1 { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); animation: pulse1 2s infinite; }
+    .google2 { background: linear-gradient(45deg,#00aced,#0088cc); animation: pulse2 2.5s infinite; }
+    .vk { background: linear-gradient(45deg,#4c75a3,#81a8c7); animation: pulse3 3s infinite; }
+    .yt { background: linear-gradient(45deg,#FF0000,#FF6347); animation: pulse4 2.8s infinite; }
+    .back { background: linear-gradient(45deg,#ee8208,#ffb347); animation: pulse5 2.6s infinite; }
+
+    @keyframes pulse1 {0% {transform: scale(1);} 50% {transform: scale(1.12);} 100% {transform: scale(1);} }
+    @keyframes pulse2 {0% {transform: scale(1);} 50% {transform: scale(1.10);} 100% {transform: scale(1);} }
+    @keyframes pulse3 {0% {transform: scale(1);} 50% {transform: scale(1.14);} 100% {transform: scale(1);} }
+    @keyframes pulse4 {0% {transform: scale(1);} 50% {transform: scale(1.13);} 100% {transform: scale(1);} }
+    @keyframes pulse5 {0% {transform: scale(1);} 50% {transform: scale(1.11);} 100% {transform: scale(1);} }
+
+    /* Vibration on click */
+    .btn:active { animation: vibrate 0.15s infinite; }
+    @keyframes vibrate {
+      0% { transform: translate(0,0) rotate(0deg);}
+      20% { transform: translate(-2px,2px) rotate(-1deg);}
+      40% { transform: translate(2px,-2px) rotate(1deg);}
+      60% { transform: translate(-2px,2px) rotate(-1deg);}
+      80% { transform: translate(2px,-2px) rotate(1deg);}
+      100% { transform: translate(0,0) rotate(0deg);}
+    }
+
+    .btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(255,255,255,0.4);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      padding: 8px 15px;
+      font-size: 14px;
+      border-radius: 8px;
+      background: #ffcc70;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <a href="gallery.html" class="lang-switch">🇷🇺 Русский</a>
+
+  <h1>My Art Gallery</h1>
+
+  <div class="gallery">
+    <img src="images/hero.jpg" alt="Painting 1">
+    <img src="images/kartina2.jpg" alt="Painting 2">
+    <img src="images/kartina3.jpg" alt="Painting 3">
+    <img src="images/kartina4.jpg" alt="Painting 4">
+    <img src="images/kartina5.jpg" alt="Painting 5">
+    <img src="images/kartina6.jpg" alt="Painting 6">
+    <img src="images/kartina7.jpg" alt="Painting 7">
+    <img src="images/kartina8.jpg" alt="Painting 8">
+    <img src="images/kartina9.jpg" alt="Painting 9">
+    <img src="images/kartina10.jpg" alt="Painting 10">
+    <img src="images/kartina11.jpg" alt="Painting 11">
+    <img src="images/kartina12.jpg" alt="Painting 12">
+    <img src="images/kartina13.jpg" alt="Painting 13">
+    <img src="images/kartina14.jpg" alt="Painting 14">
+    <img src="images/kartina15.jpg" alt="Painting 15">
+    <img src="images/kartina16.jpg" alt="Painting 16">
+    <img src="images/kartina17.jpg" alt="Painting 17">
+    <img src="images/kartina18.jpg" alt="Painting 18">
+    <img src="images/kartina19.jpg" alt="Painting 19">
+    <img src="images/kartina20.jpg" alt="Painting 20">
+    <img src="images/kartina21.jpg" alt="Painting 21">
+    <img src="images/kartina22.jpg" alt="Painting 22">
+  </div>
+
+  <div class="links">
+    <a href="https://photos.app.goo.gl/K19BbUJkFWE6oAFr9" target="_blank" class="btn google1">Google Photos Album #1</a>
+    <a href="https://photos.app.goo.gl/1tbjqhD7pKDn3NCp7" target="_blank" class="btn google2">Google Photos Album #2</a>
+    <a href="https://vk.com/album39116321_00" target="_blank" class="btn vk">VK Album</a>
+    <a href="https://youtube.com/@chademen1979?si=DR7TZt7OQPdWxfEV" target="_blank" class="btn yt">YouTube Videos</a>
+    <a href="index-en.html" class="btn back">⬅️ Back</a>
+  </div>
+
+</body>
+</html>
