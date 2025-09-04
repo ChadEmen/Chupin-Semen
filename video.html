@@ -21,18 +21,40 @@
       text-shadow: 0 0 10px rgba(255,200,100,0.9);
     }
 
+    .back-btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 12px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(45deg,#ff6a00,#ffcc00,#ff3cac,#00d4ff);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+      animation: pulseBack 2s infinite;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(255,255,255,0.4);
+    }
+
+    @keyframes pulseBack { 0%{transform:scale(1);}50%{transform:scale(1.12);}100%{transform:scale(1);} }
+
     .videos {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
       padding: 20px;
     }
 
     .btn-video {
       display: inline-block;
       padding: 15px 30px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       color: #fff;
       border-radius: 12px;
@@ -42,36 +64,40 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Градиенты с переходом цветов */
-    .grad1 { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); animation: pulse1 2s infinite; }
-    .grad2 { background: linear-gradient(45deg,#00aced,#0088cc,#00d4ff); animation: pulse2 2.5s infinite; }
-    .grad3 { background: linear-gradient(45deg,#4c75a3,#81a8c7,#a0c4ff); animation: pulse3 3s infinite; }
-    .grad4 { background: linear-gradient(45deg,#ee8208,#ffb347,#ffc107); animation: pulse4 2.2s infinite; }
-    .grad5 { background: linear-gradient(45deg,#FF0000,#FF6347,#FF4500); animation: pulse5 2.8s infinite; }
+    /* Градиенты и уникальные классы */
+    .v1 { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); animation: pulse1 2s infinite; }
+    .v2 { background: linear-gradient(45deg,#00aced,#0088cc); animation: pulse2 2.2s infinite; }
+    .v3 { background: linear-gradient(45deg,#ffde00,#f7a600); animation: pulse3 2.4s infinite; }
+    .v4 { background: linear-gradient(45deg,#4c75a3,#81a8c7); animation: pulse4 2.6s infinite; }
+    .v5 { background: linear-gradient(45deg,#ee8208,#ffb347); animation: pulse5 2.8s infinite; }
+    .v6 { background: linear-gradient(45deg,#ff4e50,#f9d423); animation: pulse6 3s infinite; }
+    .v7 { background: linear-gradient(45deg,#FF0000,#FF6347); animation: pulse7 3.2s infinite; }
+    .v8 { background: linear-gradient(45deg,#ff6a00,#fddb92); animation: pulse8 2.3s infinite; }
+    .v9 { background: linear-gradient(45deg,#00ffcc,#0099ff); animation: pulse9 2.5s infinite; }
+    .v10{ background: linear-gradient(45deg,#ff00aa,#ff77ff); animation: pulse10 2.7s infinite; }
 
-    /* Пульсация */
-    @keyframes pulse1 {0%{transform:scale(1);}50%{transform:scale(1.12);}100%{transform:scale(1);}}
-    @keyframes pulse2 {0%{transform:scale(1);}50%{transform:scale(1.10);}100%{transform:scale(1);}}
-    @keyframes pulse3 {0%{transform:scale(1);}50%{transform:scale(1.14);}100%{transform:scale(1);}}
-    @keyframes pulse4 {0%{transform:scale(1);}50%{transform:scale(1.11);}100%{transform:scale(1);}}
-    @keyframes pulse5 {0%{transform:scale(1);}50%{transform:scale(1.13);}100%{transform:scale(1);}}
+    /* Пульсации */
+    @keyframes pulse1 {0%{transform:scale(1);}50%{transform:scale(1.12);}100%{transform:scale(1);} }
+    @keyframes pulse2 {0%{transform:scale(1);}50%{transform:scale(1.11);}100%{transform:scale(1);} }
+    @keyframes pulse3 {0%{transform:scale(1);}50%{transform:scale(1.13);}100%{transform:scale(1);} }
+    @keyframes pulse4 {0%{transform:scale(1);}50%{transform:scale(1.10);}100%{transform:scale(1);} }
+    @keyframes pulse5 {0%{transform:scale(1);}50%{transform:scale(1.14);}100%{transform:scale(1);} }
+    @keyframes pulse6 {0%{transform:scale(1);}50%{transform:scale(1.12);}100%{transform:scale(1);} }
+    @keyframes pulse7 {0%{transform:scale(1);}50%{transform:scale(1.13);}100%{transform:scale(1);} }
+    @keyframes pulse8 {0%{transform:scale(1);}50%{transform:scale(1.15);}100%{transform:scale(1);} }
+    @keyframes pulse9 {0%{transform:scale(1);}50%{transform:scale(1.11);}100%{transform:scale(1);} }
+    @keyframes pulse10{0%{transform:scale(1);}50%{transform:scale(1.12);}100%{transform:scale(1);} }
 
     /* Вибрация при нажатии во все стороны */
     .btn-video:active {
       animation: vibrate 0.2s infinite;
     }
-
     @keyframes vibrate {
-      0%{transform:translate(0,0) rotate(0deg);}
-      10%{transform:translate(2px,-2px) rotate(1deg);}
-      20%{transform:translate(-2px,2px) rotate(-1deg);}
-      30%{transform:translate(2px,2px) rotate(1deg);}
-      40%{transform:translate(-2px,-2px) rotate(-1deg);}
-      50%{transform:translate(2px,-2px) rotate(1deg);}
-      60%{transform:translate(-2px,2px) rotate(-1deg);}
-      70%{transform:translate(2px,2px) rotate(1deg);}
-      80%{transform:translate(-2px,-2px) rotate(-1deg);}
-      90%{transform:translate(2px,0) rotate(0deg);}
+      0% {transform:translate(0,0) rotate(0deg);}
+      20% {transform:translate(2px,-2px) rotate(-1deg);}
+      40% {transform:translate(-2px,2px) rotate(1deg);}
+      60% {transform:translate(2px,2px) rotate(-1deg);}
+      80% {transform:translate(-2px,-2px) rotate(1deg);}
       100%{transform:translate(0,0) rotate(0deg);}
     }
 
@@ -79,19 +105,59 @@
       transform: scale(1.15);
       box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(255,255,255,0.4);
     }
+
   </style>
 </head>
 <body>
 
-  <h1>Видео о выставках и творчестве</h1>
+  <h1>Видео о творчестве</h1>
+  <a href="index.html" class="back-btn">⬅ Назад</a>
 
   <div class="videos">
-    <a href="https://youtu.be/E8Pq3yXCLLw?si=I0Bro81DnN6aVYKu" target="_blank" class="btn-video grad1">Выставка: События дня</a>
-    <a href="https://youtu.be/Mnraj9voklc?si=_9ovvh9xQlyiS4YP" target="_blank" class="btn-video grad2">Видеоотчёт с открытия</a>
-    <a href="https://vt.tiktok.com/ZSNFATvMM/" target="_blank" class="btn-video grad3">TikTok о процессе</a>
-    <a href="https://youtube.com/shorts/pjt8gcaYRSM?si=tpYsZl3Mv4ntPsqS" target="_blank" class="btn-video grad4">Shorts: кадры процесса</a>
-    <a href="https://youtube.com/shorts/JniVEd-BbRY?si=NX1rvjOisn8SL8QT" target="_blank" class="btn-video grad5">Shorts: атмосфера выставки</a>
-    <a href="index.html" class="btn-video grad1">⬅ Назад</a>
+    <!-- Цикл: чередуем классы v1-v10 для каждой кнопки -->
+    <a href="https://vk.com/wall39116321_619" target="_blank" class="btn-video v1">VK — Пост о выставке 1</a>
+    <a href="https://vk.com/wall39116321_609" target="_blank" class="btn-video v2">VK — Пост о выставке 2</a>
+    <a href="https://vk.com/wall39116321_610" target="_blank" class="btn-video v3">VK — Пост о выставке 3</a>
+    <a href="https://vk.com/wall39116321_601" target="_blank" class="btn-video v4">VK — Фото процесса</a>
+    <a href="https://surli.cc/spedtw" target="_blank" class="btn-video v5">Surli — Видеоотчёт</a>
+    <a href="https://takt-tv.ru/takt-novosti/kurskiy-khudozhnik-predstavil-vystavku-kartin-s-prostymi-nazvaniyami-i-glubokim-smyslom" target="_blank" class="btn-video v6">Takt TV — Репортаж</a>
+    <a href="https://seyminfo.ru/v-kurske-otkrylas-vystavka-kartin-semyona-chupina-moyo.html" target="_blank" class="btn-video v7">Сейминфо — Интервью</a>
+    <a href="https://youtu.be/Mnraj9voklc?si=_9ovvh9xQlyiS4YP" target="_blank" class="btn-video v8">YouTube — Видеоотчёт</a>
+    <a href="https://vk.com/wall39116321_599" target="_blank" class="btn-video v9">VK — Фото с открытия</a>
+    <a href="https://vk.com/wall39116321_602" target="_blank" class="btn-video v10">VK — Отзывы зрителей</a>
+
+    <a href="https://vk.com/wall39116321_601" target="_blank" class="btn-video v1">VK — Фото и видео процесса</a>
+    <a href="https://vk.com/wall39116321_600" target="_blank" class="btn-video v2">VK — Подборка работ</a>
+    <a href="https://vk.com/wall39116321_595" target="_blank" class="btn-video v3">VK — Духовное содержание</a>
+    <a href="https://vk.com/wall39116321_592" target="_blank" class="btn-video v4">VK — Видеоотчёт подготовки</a>
+    <a href="https://vk.com/wall39116321_583" target="_blank" class="btn-video v5">VK — Анонс новых проектов</a>
+    <a href="https://photos.app.goo.gl/K19BbUJkFWE6oAFr9" target="_blank" class="btn-video v6">Google Photos — Галерея</a>
+    <a href="https://vt.tiktok.com/ZSNFATvMM/" target="_blank" class="btn-video v7">TikTok — Творческий процесс</a>
+    <a href="https://vk.com/ctvty227" target="_blank" class="btn-video v8">VK — Интервью и биография</a>
+    <a href="https://www.instagram.com/reel/CyZirtFtWLm/?igshid=MTc4MmM1YmI2Ng==" target="_blank" class="btn-video v9">Instagram — Reel работ</a>
+    <a href="https://vt.tiktok.com/ZSNjMmtQX/" target="_blank" class="btn-video v10">TikTok — Новые картины</a>
+
+    <a href="https://vt.tiktok.com/ZSNjMbsnq/" target="_blank" class="btn-video v1">TikTok — Выставки и планы</a>
+    <a href="https://youtu.be/E8Pq3yXCLLw?si=I0Bro81DnN6aVYKu" target="_blank" class="btn-video v2">YouTube — Интервью: путь художника</a>
+    <a href="https://vk.com/wall39116321_211" target="_blank" class="btn-video v3">VK — Награды и достижения</a>
+    <a href="https://vk.com/video-91940458_456246425?list=9f419226a1dccec03c" target="_blank" class="btn-video v4">VK — Видеоотчёт эмоции</a>
+    <a href="https://vk.com/wall39116321_398" target="_blank" class="btn-video v5">VK — Отзыв зрителя</a>
+    <a href="https://vk.com/wall39116321_396" target="_blank" class="btn-video v6">VK — Фото мастер-класса</a>
+    <a href="https://youtube.com/shorts/pjt8gcaYRSM?si=tpYsZl3Mv4ntPsqS" target="_blank" class="btn-video v7">YouTube Shorts — Творческий процесс</a>
+    <a href="https://youtube.com/shorts/JniVEd-BbRY?si=NX1rvjOisn8SL8QT" target="_blank" class="btn-video v8">YouTube Shorts — Атмосфера выставки</a>
+    <a href="https://youtu.be/xqefmTqYqmA?si=8l18PpvgIZCVvLsv" target="_blank" class="btn-video v9">YouTube — Полный репортаж</a>
+    <a href="https://youtube.com/shorts/YBqOKpw4nlI?si=ds4-u60TRtkQJJxM" target="_blank" class="btn-video v10">YouTube Shorts — Взгляд изнутри</a>
+
+    <a href="https://youtube.com/shorts/xwLgnz_T3fk?si=G4K7IHgyW267glk6" target="_blank" class="btn-video v1">YouTube Shorts — Интервью фрагменты</a>
+    <a href="https://youtube.com/shorts/6RvJfyiKOQM?si=aUeYlsEbBCO6Yez0" target="_blank" class="btn-video v2">YouTube Shorts — Отзывы посетителей</a>
+    <a href="https://youtu.be/-RVXCMcvw0I?si=1l6KI8GIfuvUt6Gq" target="_blank" class="btn-video v3">YouTube — Документальный фильм</a>
+    <a href="https://youtube.com/shorts/2JHjZKhoAeg?si=P0gND9Tl5D1Dx81l" target="_blank" class="btn-video v4">YouTube Shorts — Кадры с выставки</a>
+    <a href="https://youtu.be/K0pgNwkj_AE?si=2EOSvohyVS2tXOCm" target="_blank" class="btn-video v5">YouTube — Культурный обзор</a>
+    <a href="https://youtube.com/shorts/WRQBfgCOS7I?si=P3QMO7t2E-iy--oO" target="_blank" class="btn-video v6">YouTube Shorts — Художественные идеи</a>
+    <a href="https://youtube.com/shorts/V5lAcq0tN8U?si=cKFMa37Q4AA-M1s5" target="_blank" class="btn-video v7">YouTube Shorts — Атмосфера и свет</a>
+    <a href="https://youtube.com/shorts/oijIbFUba4A?si=R3y_fzpCcous7XA4" target="_blank" class="btn-video v8">YouTube Shorts — Backstage</a>
+    <a href="https://youtube.com/shorts/-50V-MjNiJw?si=G79EfGsxRJ5LyDnr" target="_blank" class="btn-video v9">YouTube Shorts — Отзывы зрителей</a>
+
   </div>
 
 </body>
