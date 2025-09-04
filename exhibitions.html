@@ -50,6 +50,7 @@
     .yt { background: linear-gradient(45deg,#FF0000,#FF6347); }
     .dzen { background: linear-gradient(45deg,#ffde00,#f7a600); }
     .takt { background: linear-gradient(45deg,#ff4e50,#f9d423); }
+    .back { background: linear-gradient(45deg,#33ccff,#ff33cc,#33ff99); }
 
     /* Пульсация разная скорость и амплитуда */
     .insta { animation: pulse1 2s infinite; }
@@ -59,14 +60,16 @@
     .yt { animation: pulse5 2.8s infinite; }
     .dzen { animation: pulse6 3.2s infinite; }
     .takt { animation: pulse7 2.6s infinite; }
+    .back { animation: pulse8 2s infinite; }
 
-    @keyframes pulse1 { 0% {transform: scale(1);} 50% {transform: scale(1.12);} 100% {transform: scale(1);} }
-    @keyframes pulse2 { 0% {transform: scale(1);} 50% {transform: scale(1.10);} 100% {transform: scale(1);} }
-    @keyframes pulse3 { 0% {transform: scale(1);} 50% {transform: scale(1.14);} 100% {transform: scale(1);} }
-    @keyframes pulse4 { 0% {transform: scale(1);} 50% {transform: scale(1.11);} 100% {transform: scale(1);} }
-    @keyframes pulse5 { 0% {transform: scale(1);} 50% {transform: scale(1.13);} 100% {transform: scale(1);} }
-    @keyframes pulse6 { 0% {transform: scale(1);} 50% {transform: scale(1.15);} 100% {transform: scale(1);} }
-    @keyframes pulse7 { 0% {transform: scale(1);} 50% {transform: scale(1.12);} 100% {transform: scale(1);} }
+    @keyframes pulse1 { 0% {transform: scale(1);} 50% {transform: scale(1.14);} 100% {transform: scale(1);} }
+    @keyframes pulse2 { 0% {transform: scale(1);} 50% {transform: scale(1.12);} 100% {transform: scale(1);} }
+    @keyframes pulse3 { 0% {transform: scale(1);} 50% {transform: scale(1.16);} 100% {transform: scale(1);} }
+    @keyframes pulse4 { 0% {transform: scale(1);} 50% {transform: scale(1.13);} 100% {transform: scale(1);} }
+    @keyframes pulse5 { 0% {transform: scale(1);} 50% {transform: scale(1.15);} 100% {transform: scale(1);} }
+    @keyframes pulse6 { 0% {transform: scale(1);} 50% {transform: scale(1.17);} 100% {transform: scale(1);} }
+    @keyframes pulse7 { 0% {transform: scale(1);} 50% {transform: scale(1.14);} 100% {transform: scale(1);} }
+    @keyframes pulse8 { 0% {transform: scale(1);} 50% {transform: scale(1.13);} 100% {transform: scale(1);} }
 
     /* Вибрация при нажатии */
     .btn-report:active { animation: vibrate 0.15s infinite; }
@@ -84,7 +87,6 @@
       transform: scale(1.15);
       box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(255,255,255,0.4);
     }
-
   </style>
 </head>
 <body>
@@ -98,8 +100,11 @@
     <a href="https://kursk.bezformata.com/listnews/tvortca-semyona-chupina/146728036/?amp=1" target="_blank" class="btn-report vk">Без Формата — Репортаж</a>
     <a href="https://vipvkurske.com/articles/2998/" target="_blank" class="btn-report ok">VIP в Курске — Репортаж</a>
     <a href="https://takt-tv.ru/takt-novosti/kurskiy-khudozhnik-predstavil-vystavku-kartin-s-prostymi-nazvaniyami-i-glubokim-smyslom" target="_blank" class="btn-report takt">Takt TV — Репортаж</a>
-    <a href="https://seyminfo.ru/v-kurske-otkrylas-vystavka-kartin-semyona-chupina-moyo.html" target="_blank" class="btn-report yt">Сейминфо — Повторная ссылка</a>
+    <a href="https://youtu.be/E8Pq3yXCLLw?si=I0Bro81DnN6aVYKu" target="_blank" class="btn-report yt">Выставка в передаче «События дня»</a>
+    <a href="https://seyminfo.ru/v-kurske-otkrylas-vystavka-kartin-semyona-chupina-moyo.html" target="_blank" class="btn-report insta">Сейминфо — Повторная ссылка</a>
+    <a href="index.html" class="btn-report back">← Назад</a>
   </div>
 
 </body>
 </html>
+
