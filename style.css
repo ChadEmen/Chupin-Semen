@@ -735,6 +735,25 @@ main h1 {
   transform: scale(0.98);
   box-shadow: 0 5px 15px rgba(0,0,0,0.7);
 }
+/* Вибрация кнопок во все стороны при нажатии */
+.btn-report:active {
+  animation: vibrateAll 0.15s infinite;
+}
+
+@keyframes vibrateAll {
+  0% { transform: translate(0,0) rotate(0deg); }
+  10% { transform: translate(2px,-2px) rotate(1deg); }
+  20% { transform: translate(-2px,2px) rotate(-1deg); }
+  30% { transform: translate(2px,2px) rotate(1deg); }
+  40% { transform: translate(-2px,-2px) rotate(-1deg); }
+  50% { transform: translate(2px,-2px) rotate(1deg); }
+  60% { transform: translate(-2px,2px) rotate(-1deg); }
+  70% { transform: translate(2px,2px) rotate(1deg); }
+  80% { transform: translate(-2px,-2px) rotate(-1deg); }
+  90% { transform: translate(2px,-2px) rotate(1deg); }
+  100% { transform: translate(0,0) rotate(0deg); }
+}
+
 
 
 
