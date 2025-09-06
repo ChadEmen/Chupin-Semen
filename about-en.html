@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semyon Chupin — Biography</title>
-
+  <title>Semyon Chupin — Member of the Professional Union of Artists of Russia</title>
   <style>
     body {
       margin:0;
-      font-family: Arial, sans-serif;
+      font-family:Arial, sans-serif;
       background:#111;
       color:#fff;
       text-align:center;
@@ -31,14 +30,12 @@
       margin-top:10px;
     }
 
-    main {
-      padding:20px;
-      max-width:1000px;
-      margin:0 auto;
+    footer {
+      text-align:center;
+      padding:40px;
+      background:#0d0d0d;
+      margin-top:50px;
     }
-
-    h2 { font-size:28px; margin-top:40px; color:#ffcc70; }
-    p { font-size:18px; line-height:1.6; color:#ddd; }
 
     .socials {
       display:flex;
@@ -48,7 +45,7 @@
       margin-bottom:30px;
     }
 
-    .btn, .buy-btn, .back-btn {
+    .btn, .fire-btn, .buy-btn {
       display:inline-block;
       padding:15px 30px;
       font-size:20px;
@@ -58,25 +55,51 @@
       box-shadow:0 5px 15px rgba(0,0,0,0.4);
       transition: all 0.2s ease;
       color:#fff;
+      position:relative;
       cursor:pointer;
-      margin:10px;
     }
 
-    /* Vibrations */
+    /* 🔥 Вибрация */
     @keyframes vibrate1 {0%{transform:translate(0,0);}25%{transform:translate(1px,-1px);}50%{transform:translate(-1px,1px);}75%{transform:translate(1px,1px);}100%{transform:translate(0,0);}}
     @keyframes vibrate2 {0%{transform:translate(0,0);}25%{transform:translate(2px,-1px);}50%{transform:translate(-2px,1px);}75%{transform:translate(2px,0);}100%{transform:translate(0,0);}}
+    @keyframes vibrate3 {0%{transform:translate(0,0);}25%{transform:translate(1px,-2px);}50%{transform:translate(-1px,2px);}75%{transform:translate(2px,1px);}100%{transform:translate(0,0);}}
+    @keyframes vibrate4 {0%{transform:translate(0,0);}25%{transform:translate(2px,-2px);}50%{transform:translate(-2px,2px);}75%{transform:translate(2px,2px);}100%{transform:translate(0,0);}}
+    @keyframes vibrate5 {0%{transform:translate(0,0);}25%{transform:translate(1px,-3px);}50%{transform:translate(-1px,3px);}75%{transform:translate(2px,1px);}100%{transform:translate(0,0);}}
     @keyframes vibrate-strong {0%{transform:translate(0,0);}25%{transform:translate(3px,-3px);}50%{transform:translate(-3px,3px);}75%{transform:translate(3px,3px);}100%{transform:translate(0,0);}}
 
-    .buy-btn {
-      background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
-      animation: vibrate-strong 0.8s infinite;
+    .btn:hover, .fire-btn:hover, .buy-btn:hover { animation-duration:0.1s; }
+
+    .btn-gal { background:#f59e0b; animation:vibrate1 1s infinite; }
+    .btn-video { background:#60a5fa; animation:vibrate2 1.2s infinite; }
+    .btn-exh { background:#10b981; animation:vibrate3 0.9s infinite; }
+    .btn-course { background:#f43f5e; animation:vibrate4 1.1s infinite; }
+    .btn-about { background:#a78bfa; animation:vibrate5 1.3s infinite; }
+
+    .buy-btn { 
+      background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); 
+      animation:vibrate-strong 0.8s infinite;
     }
 
-    .back-btn {
-      background:linear-gradient(45deg,#f59e0b,#facc15);
-      animation:vibrate2 1s infinite;
+    .insta { background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); animation:vibrate1 1s infinite;}
+    .tg { background:#0088cc; animation:vibrate2 1.2s infinite;}
+    .vk { background:#4c75a3; animation:vibrate3 1s infinite;}
+    .ok { background:#ee8208; animation:vibrate4 1.1s infinite;}
+    .yt { background:#FF0000; animation:vibrate5 1.3s infinite;}
+
+    .fire-btn {
+      padding:18px 36px;
+      font-size:22px;
+      border-radius:50px;
+      background:linear-gradient(45deg, #ff4e00, #ec9f05);
+      box-shadow:0 0 20px rgba(255,80,0,0.7);
+      animation:vibrate3 1s infinite;
+    }
+    .fire-btn:active {
+      background:linear-gradient(45deg, #ec9f05, #ff4e00);
+      box-shadow:0 0 40px rgba(255,0,0,1), 0 0 80px rgba(255,80,0,1);
     }
 
+    /* Кнопка переключения языка */
     .lang-btn {
       display:inline-block;
       padding:8px 14px;
@@ -93,9 +116,10 @@
       top:10px;
       right:10px;
     }
-    .lang-btn:hover { background:rgba(255,200,100,0.6); transform:scale(1.05); }
-
-    img { border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.5); width:250px; }
+    .lang-btn:hover {
+      background:rgba(255,200,100,0.6);
+      transform:scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -104,56 +128,40 @@
 
   <header>
     <h1>Semyon Chupin</h1>
-    <p>Artist • Creator • Outstanding Cultural Figure of Russia 2023-2025</p>
+    <p>Artist • Creator • Outstanding figure of culture and Art of Russia 2023-2025</p>
   </header>
 
   <main>
-    <h2>Biography</h2>
-    <p>Since early childhood, I have been passionate about drawing, starting from kindergarten and school, where I drew various scenes on my desks.  
-    My talent came from my mother, who was an artist and worked in the airport creating beautiful signs and painting portraits. My father, a civil aviation pilot, also worked there.  
-    After school, I entered university (1997-2002) and immediately fell in love with painting. My teacher, Chilikhin at Khudgaf, when he saw that I chose pencil drawing for my diploma, cried and said: "You are a wonderful painter, and it is a pity you chose only drawing!" Later, he passed away, but his words stayed with me. Since 2002, I have devoted myself to painting, winning first places for color compositions during my studies.  
-    I created a series of oil paintings that caused a sensation at exhibitions in Kursk. Each painting took months, with my soul poured into it. Visitors often cried seeing my landscapes.  
-    I tried various businesses but could not live without painting. It has been my life for over 22 years. Traveling, especially to Vietnam, inspired me to capture the beauty of our planet on canvas. Few timely words can change a person's destiny!  
-    I realized how the education system suppresses talents and complicates what is naturally simple. My course reveals the true secrets of creativity, bypassing unnecessary techniques and false teachings, letting the creative energy flow freely.</p>
+    <h2 style="margin-top:50px;">Welcome to my site!</h2>
+    <p>Here you can find my paintings, videos, articles, and courses. Everything is created with love and passion ♥️🔥</p> 
 
-    <h2>Documents & Photos</h2>
-    <p>Below are photos of my diplomas, certificates, and publications:</p>
-
-    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;">
-      <img src="imедж/diplom-ob-образовании.jpg" alt="Diploma">
-      <img src="imедж/gramota.jpg" alt="Certificate">
-      <img src="imедж/chlen-soyuza.jpg" alt="Union Membership">
-      <img src="imедж/pismo-minkult.jpg" alt="Letter from Ministry of Culture">
-      <img src="imедж/vip-zhurnal1.jpg" alt="VIP Magazine, photo 1">
-      <img src="imедж/vip-zhurnal2.jpg" alt="VIP Magazine, photo 2">
-      <img src="imедж/kur-izvestnik.jpg" alt="Kursk Newspaper">
-      <!-- Reviews from exhibitions: 10 photos -->
-      <img src="imедж/otzyv1.jpg" alt="Exhibition Review 1">
-      <img src="imедж/otzyv2.jpg" alt="Exhibition Review 2">
-      <img src="imедж/otzyv3.jpg" alt="Exhibition Review 3">
-      <img src="imедж/otzyv4.jpg" alt="Exhibition Review 4">
-      <img src="imедж/otzyv5.jpg" alt="Exhibition Review 5">
-      <img src="imедж/otzyv6.jpg" alt="Exhibition Review 6">
-      <img src="imедж/otzyv7.jpg" alt="Exhibition Review 7">
-      <img src="imедж/otzyv8.jpg" alt="Exhibition Review 8">
-      <img src="imедж/otzyv9.jpg" alt="Exhibition Review 9">
-      <img src="imедж/otzyv10.jpg" alt="Exhibition Review 10">
+    <div style="margin:40px 0;">
+      <a href="gallery-en.html" class="btn btn-gal">🖼 Gallery</a> 
+      <a href="articles-en.html" class="btn btn-about">💖 Reports</a>
+      <a href="video-en.html" class="btn btn-video">🎬 Videos</a>
+      <a href="exhibitions-en.html" class="btn btn-exh">🏛 Exhibitions</a>
+      <a href="courses-en.html" class="btn btn-course">🎨 Courses/Orders</a>
+      <a href="about-en.html" class="btn btn-about">💖 About me</a>
+      <a href="shop-en.html" class="buy-btn">💰 Buy Course</a>
     </div>
 
-    <a href="shop-en.html" class="buy-btn">💰 Buy Course</a>
-    <a href="index-en.html" class="back-btn">Back</a>
+    <div style="margin:40px 20px; text-align:left;">
+      <p>Since early childhood, I was fascinated by drawing, starting from kindergarten and school, where I drew various scenes on desks. My talent was inherited from my mother, who was an artist and worked at the airport creating beautiful signs and portraits. My father, a civil aviation pilot, also worked there. After school, I entered university (1997-2002) and became deeply interested in painting. My teacher, Mr. Chilikin, at the Art Faculty, seeing my choice of pencil drawing for the diploma exam, shed tears and said: “You are a wonderful painter, it is a pity you chose only drawing!” Unfortunately, he passed away later, but his words stayed with me. Since 2002, I focused on painting, winning first prizes for color composition. I created a series of oil paintings that amazed viewers at exhibitions. Each painting took months, and people often cried seeing my landscapes. I tried different businesses, but painting remained my passion for over 22 years. Traveling, especially to Vietnam, inspired me, and I returned to the canvas full of energy. My course reveals the real secrets of painting, exposing how education systems often suppress talent, showing that creativity comes from God, not the state. My course helps beginners
+    and experienced artists alike to unleash their creative energy freely without unnecessary rules or techniques imposed by schools or state programs. It saves years of trial and error and filters out harmful information that could block your talent and creative flow.</p>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/" target="_blank" class="btn insta">Instagram</a>
+      <a href="https://t.me/" target="_blank" class="btn tg">Telegram</a>
+      <a href="https://vk.com/" target="_blank" class="btn vk">VK</a>
+      <a href="https://ok.ru/" target="_blank" class="btn ok">OK</a>
+      <a href="https://www.youtube.com/" target="_blank" class="btn yt">YouTube</a>
+    </div>
   </main>
 
   <footer>
-    <div class="socials">
-      <a href="#" class="insta">Instagram</a>
-      <a href="#" class="tg">Telegram</a>
-      <a href="#" class="vk">VK</a>
-      <a href="#" class="ok">OK</a>
-      <a href="#" class="yt">YouTube</a>
-    </div>
+    <p>&copy; 2025 Semyon Chupin. All rights reserved.</p>
+    <p>Website created with ❤️ by Seilara</p>
   </footer>
 
 </body>
 </html>
-
