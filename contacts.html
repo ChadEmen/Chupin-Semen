@@ -70,6 +70,7 @@
       line-height:1.6;
     }
 
+    /* 🔥 Вибрации кнопок */
     .buy-btn {
       display:inline-block;
       padding:18px 36px;
@@ -78,9 +79,9 @@
       border-radius:12px;
       color:#fff;
       text-decoration:none;
-      background:linear-gradient(45deg,#ff4e00,#ec9f05);
+      background:linear-gradient(45deg,#f43f5e,#ec4899);
       box-shadow:0 5px 15px rgba(0,0,0,0.4);
-      animation:vibrate-strong 0.8s infinite;
+      animation:vibrate-strong 1.2s infinite;
       transition: all 0.2s ease;
       margin-top:30px;
       cursor:pointer;
@@ -88,9 +89,31 @@
 
     @keyframes vibrate-strong {
       0%{transform:translate(0,0);}
-      25%{transform:translate(3px,-3px);}
-      50%{transform:translate(-3px,3px);}
-      75%{transform:translate(3px,3px);}
+      25%{transform:translate(4px,-3px);}
+      50%{transform:translate(-4px,3px);}
+      75%{transform:translate(4px,4px);}
+      100%{transform:translate(0,0);}
+    }
+
+    .nav-btn {
+      display:inline-block;
+      padding:12px 24px;
+      font-size:18px;
+      font-weight:bold;
+      border-radius:10px;
+      color:#fff;
+      text-decoration:none;
+      background:linear-gradient(45deg,#10b981,#3b82f6);
+      box-shadow:0 4px 12px rgba(0,0,0,0.3);
+      margin:10px;
+      animation:vibrate-nav 0.8s infinite;
+    }
+
+    @keyframes vibrate-nav {
+      0%{transform:translate(0,0);}
+      25%{transform:translate(1px,-1px);}
+      50%{transform:translate(-1px,1px);}
+      75%{transform:translate(1px,1px);}
       100%{transform:translate(0,0);}
     }
 
@@ -119,6 +142,11 @@
       text-decoration:none;
       transition:all 0.2s ease;
     }
+
+    .insta { background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);}
+    .tg { background:#0088cc;}
+    .vk { background:#4
+
 
     .insta { background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);}
     .tg { background:#0088cc;}
@@ -156,3 +184,4 @@
   </footer>
 </body>
 </html>
+
