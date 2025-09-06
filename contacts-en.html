@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses & Orders — Semyon Chupin</title>
+  <style>
+    body {
+      margin:0;
+      font-family: "Arial Black", Arial, sans-serif;
+      background:#111;
+      color:#fff;
+      text-align:center;
+    }
+
+    header {
+      padding:40px;
+      background:#1a1a1a;
+      box-shadow:0 4px 20px rgba(0,0,0,0.6);
+    }
+    header h1 {
+      font-size:36px;
+      margin:0;
+      color:#ffcc70;
+      text-shadow:0 0 10px rgba(255,200,100,0.9);
+    }
+
+    main {
+      padding:40px 20px;
+    }
+
+    @keyframes vibrate1 {0%{transform:translate(0,0);}25%{transform:translate(1px,-1px);}50%{transform:translate(-1px,1px);}75%{transform:translate(1px,1px);}100%{transform:translate(0,0);}}
+    @keyframes vibrate2 {0%{transform:translate(0,0);}25%{transform:translate(2px,-1px);}50%{transform:translate(-2px,1px);}75%{transform:translate(2px,0);}100%{transform:translate(0,0);}}
+    
+    .btn, .buy-btn, .back-btn {
+      display:inline-block;
+      padding:15px 30px;
+      font-size:20px;
+      font-weight:bold;
+      text-decoration:none;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.4);
+      transition: all 0.2s ease;
+      color:#fff;
+      cursor:pointer;
+      margin:10px;
+      position:relative;
+    }
+
+    .buy-btn {
+      background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+      animation:vibrate1 0.8s infinite;
+    }
+
+    .back-btn {
+      background: linear-gradient(45deg,#10b981,#3b82f6,#facc15);
+      animation:vibrate2 1.2s infinite;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align:center;
+      padding:40px;
+      background:#0d0d0d;
+      margin-top:50px;
+    }
+
+    .socials {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+      margin-bottom:30px;
+    }
+
+    .insta { background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); }
+    .tg { background:#0088cc; }
+    .vk { background:#4c75a3; }
+    .ok { background:#ee8208; }
+    .yt { background:#FF0000; }
+
+    .socials .btn {
+      padding:12px 20px;
+      font-size:18px;
+      border-radius:12px;
+      animation:vibrate1 1s infinite;
+    }
+
+    .lang-btn {
+      display:inline-block;
+      padding:8px 14px;
+      font-size:16px;
+      font-weight:bold;
+      text-decoration:none;
+      border-radius:10px;
+      color:#fff;
+      background:rgba(255,200,100,0.3);
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      cursor:pointer;
+      position:absolute;
+      top:10px;
+      right:10px;
+    }
+
+    .lang-btn:hover {
+      background:rgba(255,200,100,0.6);
+      transform:scale(1.05);
+    }
+
+    main p {
+      font-size:20px;
+      line-height:1.6;
+      max-width:900px;
+      margin:20px auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="lang-btn">🇷🇺 Русский</a>
+
+  <header>
+    <h1>Semyon Chupin</h1>
+    <p>Artist • Creator • Outstanding figure of Culture and Arts of Russia 2023-2025</p>
+  </header>
+
+  <main>
+    <h2>Courses & Orders</h2>
+    <p>Everything that is false is difficult… The system is built to fill your head and, on the contrary, block talents rather than reveal them. I will show how to make it 1000 times simpler and more effective. Before entering a university, this knowledge is like treasure for pirates: from the first day, they will start reducing and blocking what God has embedded in you.</p>
+
+    <a href="shop.html" class="buy-btn">💰 Buy Course</a>
+    <a href="index-en.html" class="back-btn">⬅️ Back</a>
+  </main>
+
+  <footer>
+    <h3 style="margin-bottom:20px; font-size:26px;">🌍 Я в соцсетях:</h3>
+    <div class="socials">
+      <a href="https://www.instagram.com/simadve?igsh=MjE1MmI2YnUzb2ky" target="_blank" class="btn insta">📷 Instagram</a>
+      <a href="https://t.me/ChupinSemen" target="_blank" class="btn tg">✈️ Telegram</a>
+      <a href="https://vk.com/ctvty227" target="_blank" class="btn vk">🖤 VK</a>
+      <a href="https://ok.ru/profile/586800689334?utm_campaign=android_share&utm_content=profile" target="_blank" class="btn ok">👌 OK</a>
+      <a href="https://youtube.com/@chademen1979?si=DR7TZt7OQPdWxfEV" target="_blank" class="btn yt">▶️ YouTube</a>
+    </div>
+  </footer>
+
+</body>
+</html>
