@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buy Painting Course</title>
+<title>Купить курс</title>
 <style>
   body {
     margin:0;
@@ -43,20 +43,20 @@
 </head>
 <body>
 
-<h1>💰 Buy Painting Course</h1>
-<p>Click the button below to access the exclusive video lessons in our private channel:</p>
+<h1>💰 Купить курс живописи</h1>
+<p>Нажмите на кнопку ниже, чтобы перейти в закрытый канал с эксклюзивными видео-уроками:</p>
 
-<a href="#" id="buyBtn" class="buy-btn">💰 Buy Course</a>
+<a href="#" id="buyBtn" class="buy-btn">💰 Купить курс</a>
 
 <script>
   document.getElementById('buyBtn').addEventListener('click', function(e){
     e.preventDefault();
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     if(/android|iphone|ipad|ipod/i.test(userAgent)) {
-      // Mobile device → open Telegram app
+      // Мобильное устройство → открываем Telegram приложение
       window.location.href = "tg://resolve?domain=tribute&startapp=sB4C";
     } else {
-      // Desktop or browser → open web link
+      // Десктоп или браузер → открываем веб-ссылку
       window.open("https://web.tribute.tg/s/B4C", "_blank");
     }
   });
