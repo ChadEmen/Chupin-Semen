@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy Painting Course</title>
+<style>
+  body {
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#111;
+    color:#fff;
+    text-align:center;
+  }
+
+  .buy-btn {
+    display:inline-block;
+    padding:18px 40px;
+    font-size:24px;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:50px;
+    color:#fff;
+    background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+    box-shadow:0 0 20px rgba(255,80,0,0.7);
+    animation: vibrate-strong 0.8s infinite;
+    transition: all 0.2s ease;
+    cursor:pointer;
+  }
+
+  .buy-btn:hover {
+    transform:scale(1.05);
+  }
+
+  @keyframes vibrate-strong {
+    0%{transform:translate(0,0);}
+    25%{transform:translate(3px,-3px);}
+    50%{transform:translate(-3px,3px);}
+    75%{transform:translate(3px,3px);}
+    100%{transform:translate(0,0);}
+  }
+</style>
+</head>
+<body>
+
+<h1>💰 Buy Painting Course</h1>
+<p>Click the button below to access the exclusive video lessons in our private channel:</p>
+
+<a href="#" id="buyBtn" class="buy-btn">💰 Buy Course</a>
+
+<script>
+  document.getElementById('buyBtn').addEventListener('click', function(e){
+    e.preventDefault();
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if(/android|iphone|ipad|ipod/i.test(userAgent)) {
+      // Mobile device → open Telegram app
+      window.location.href = "tg://resolve?domain=tribute&startapp=sB4C";
+    } else {
+      // Desktop or browser → open web link
+      window.open("https://web.tribute.tg/s/B4C", "_blank");
+    }
+  });
+</script>
+
+</body>
+</html>
