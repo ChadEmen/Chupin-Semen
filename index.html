@@ -4,65 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Семён Чупин — Член профессионального союза Художников России</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Marck+Script&family=Pacifico&family=Cormorant+Garamond&family=Dancing+Script&family=Kaushan+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Marck+Script&family=Pacifico&family=Cormorant+Garamond&display=swap" rel="stylesheet">
 
 <style>
-/* Основной текст сайта */
+/* Для всего текста на сайте */
 body {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
+  font-size: 18px; /* Размер основного текста */
   line-height: 1.6;
-  color: #222;
-  background-color: #fafafa;
-  margin: 0;
-  padding: 0;
+  color: #222; /* Можно поменять цвет текста */
 }
 
-/* Заголовки */
-h1 {
+/* Для заголовков */
+h1, h2, h3 {
   font-family: 'Great Vibes', cursive;
-  font-size: 100px; /* Имя Семён Чупин крупно и эффектно */
-  color: #1a1a1a;
-  text-align: center;
-  margin: 30px 0 10px 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: normal;
+  line-height: 1.2;
 }
 
-h2 {
-  font-family: 'Marck Script', cursive;
-  font-size: 32px; /* Подзаголовок гармоничный */
-  color: #333;
-  text-align: center;
-  margin-bottom: 25px;
-}
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 28px; }
 
-h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 24px;
-  color: #444;
-  margin-bottom: 20px;
-}
-
-/* Кнопки */
+/* Для кнопок */
 button, .button {
-  font-family: 'Dancing Script', cursive; /* Новый красивый шрифт для кнопок */
-  font-size: 22px;
-  padding: 14px 28px;
-  background-color: #f2f2f2;
-  border: 2px solid #1a1a1a;
-  border-radius: 20px;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px; /* Размер текста на кнопках */
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border: 2px solid #222;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.4s ease;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
 button:hover, .button:hover {
-  background-color: #1a1a1a;
+  background-color: #222;
   color: #fff;
-  transform: scale(1.1);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transform: scale(1.05);
 }
+
+/* Стиль кнопки переключения языка */
+.lang-switch {
+  font-family: 'Marck Script', cursive;
+  font-size: 18px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+</style>
 
   /* Стиль кнопки переключения языка */
   .lang-btn {
@@ -254,6 +243,7 @@ button:hover, .button:hover {
      
        
    
+
 
 
 
