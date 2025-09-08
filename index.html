@@ -4,102 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Семён Чупин — Член профессионального союза Художников России</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Marck+Script&family=Pacifico&family=Cormorant+Garamond&display=swap" rel="stylesheet">
-<style>
-/* Для всего текста на сайте */
-body {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; /* Размер основного текста */
-  line-height: 1.6;
-  color: #222; /* Можно поменять цвет текста */
-}
-
-/* Для заголовков */
-h1, h2, h3 {
-  font-family: 'Great Vibes', cursive;
-  font-weight: normal;
-  line-height: 1.2;
-}
-
-h1 { font-size: 248px; }
-h2 { font-size: 30px; }
-h3 { font-size: 30px; }
-
-/* Для кнопок */
-button, .button {
-  font-family: 'Pacifico', cursive;
-  font-size: 20px; /* Размер текста на кнопках */
-  padding: 10px 20px;
-  background-color: #f5f5f5;
-  border: 2px solid #222;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover, .button:hover {
-  background-color: #222;
-  color: #fff;
-  transform: scale(1.05);
-}
-  /* Стиль кнопки переключения языка */
-  .lang-btn {
-    display:inline-block;
-    padding:8px 14px;
-    font-size:16px;
-    font-weight:bold;
-    text-decoration:none;
-    border-radius:10px;
-    color:#fff;
-    background:rgba(255,200,100,0.3); /* полупрозрачный фон */
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-    cursor:pointer;
-  }
-
-  .lang-btn:hover {
-    background:rgba(255,200,100,0.6); /* чуть ярче при наведении */
-    transform:scale(1.05);
-  }
-</style>
-</head>
-<body>
-  <div style="text-align:right; margin:10px;">
-  <a href="index-en.html" class="lang-btn">🇬🇧 English</a>
-</div>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Marck+Script&family=Pacifico&family=Cormorant+Garamond&display=swap" rel="stylesheet">
   <style>
     body {
       margin:0;
-      font-family:Arial, sans-serif;
+      font-family: 'Cormorant Garamond', serif;
       background:#111;
       color:#fff;
       text-align:center;
     }
 
     header {
-      padding:40px;
+      padding:50px 20px;
       background:#1a1a1a;
       box-shadow:0 4px 20px rgba(0,0,0,0.6);
     }
-    header h1 {
-      font-size:36px;
-      margin:0;
+
+    /* Имя художника */
+    #artist-name {
+      font-family: 'Great Vibes', cursive;
+      font-size:82px;
       color:#ffcc70;
-      text-shadow:0 0 10px rgba(255,200,100,0.9);
+      margin:0;
+      text-shadow:0 0 15px rgba(255,200,100,0.9);
     }
+
+    /* Подзаголовок */
     header p {
-      font-size:18px;
+      font-family: 'Marck Script', cursive;
+      font-size:28px;
       color:#ddd;
-      margin-top:10px;
+      margin-top:12px;
     }
 
-    footer {
-      text-align:center;
-      padding:40px;
-      background:#0d0d0d;
-      margin-top:50px;
+    main {
+      padding:40px 20px;
     }
 
+    h2 {
+      font-family: 'Marck Script', cursive;
+      font-size:36px;
+      color:#ffdd99;
+      margin-bottom:20px;
+    }
+
+    p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size:20px;
+      line-height:1.6;
+      color:#eee;
+    }
+
+    /* Кнопки */
+    .btn, .fire-btn, .buy-btn {
+      display:inline-block;
+      padding:15px 30px;
+      font-size:20px;
+      font-family:'Pacifico', cursive;
+      font-weight:bold;
+      text-decoration:none;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+      color:#fff;
+      margin:8px;
+      cursor:pointer;
+    }
+
+    .btn:hover, .fire-btn:hover, .buy-btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+
+    /* Соцсети */
     .socials {
       display:flex;
       flex-wrap:wrap;
@@ -108,87 +85,47 @@ button:hover, .button:hover {
       margin-bottom:30px;
     }
 
-    .btn, .fire-btn, .buy-btn {
-      display:inline-block;
-      padding:15px 30px;
-      font-size:20px;
-      font-weight:bold;
-      text-decoration:none;
-      border-radius:12px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.4);
-      transition: all 0.2s ease;
-      color:#fff;
-      position:relative;
-      cursor:pointer;
-    }
+    .insta { background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);}
+    .tg { background:#0088cc;}
+    .vk { background:#4c75a3;}
+    .ok { background:#ee8208;}
+    .yt { background:#FF0000;}
 
-    /* 🔥 Постоянная вибрация */
-    @keyframes vibrate1 {0%{transform:translate(0,0);}25%{transform:translate(1px,-1px);}50%{transform:translate(-1px,1px);}75%{transform:translate(1px,1px);}100%{transform:translate(0,0);}}
-    @keyframes vibrate2 {0%{transform:translate(0,0);}25%{transform:translate(2px,-1px);}50%{transform:translate(-2px,1px);}75%{transform:translate(2px,0);}100%{transform:translate(0,0);}}
-    @keyframes vibrate3 {0%{transform:translate(0,0);}25%{transform:translate(1px,-2px);}50%{transform:translate(-1px,2px);}75%{transform:translate(2px,1px);}100%{transform:translate(0,0);}}
-    @keyframes vibrate4 {0%{transform:translate(0,0);}25%{transform:translate(2px,-2px);}50%{transform:translate(-2px,2px);}75%{transform:translate(2px,2px);}100%{transform:translate(0,0);}}
-    @keyframes vibrate5 {0%{transform:translate(0,0);}25%{transform:translate(1px,-3px);}50%{transform:translate(-1px,3px);}75%{transform:translate(2px,1px);}100%{transform:translate(0,0);}}
-    @keyframes vibrate-strong {0%{transform:translate(0,0);}25%{transform:translate(3px,-3px);}50%{transform:translate(-3px,3px);}75%{transform:translate(3px,3px);}100%{transform:translate(0,0);}}
-
-    /* 🔥 Вибрация при наведении */
-    .btn:hover, .fire-btn:hover, .buy-btn:hover { animation-duration:0.1s; }
-
-    /* 🎨 Кнопки контента */
-    .btn-gal { background:#f59e0b; animation:vibrate1 1s infinite; }
-    .btn-video { background:#60a5fa; animation:vibrate2 1.2s infinite; }
-    .btn-exh { background:#10b981; animation:vibrate3 0.9s infinite; }
-    .btn-course { background:#f43f5e; animation:vibrate4 1.1s infinite; }
-    .btn-about { background:#a78bfa; animation:vibrate5 1.3s infinite; }
-
-    /* 🎨 Кнопка купить курс */
-    .buy-btn { background:linear-gradient(45deg,#ff4e00,#ec9f05); animation:vibrate-strong 0.8s infinite; }
-
-    /* Соцсети */
-    .insta { background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); animation:vibrate1 1s infinite;}
-    .tg { background:#0088cc; animation:vibrate2 1.2s infinite;}
-    .vk { background:#4c75a3; animation:vibrate3 1s infinite;}
-    .ok { background:#ee8208; animation:vibrate4 1.1s infinite;}
-    .yt { background:#FF0000; animation:vibrate5 1.7s infinite;}
-
-    /* 🔥 Кнопка почты */
     .fire-btn {
+      background:linear-gradient(45deg, #ff4e00, #ec9f05);
       padding:18px 36px;
       font-size:22px;
       border-radius:50px;
-      background:linear-gradient(45deg, #ff4e00, #ec9f05);
       box-shadow:0 0 20px rgba(255,80,0,0.7);
-      animation:vibrate3 1s infinite;
-    }
-    .fire-btn:active {
-      background:linear-gradient(45deg, #ec9f05, #ff4e00);
-      box-shadow:0 0 40px rgba(255,0,0,1), 0 0 80px rgba(255,80,0,1);
     }
 
+    footer {
+      padding:40px 20px;
+      background:#0d0d0d;
+      margin-top:50px;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Семён Чупин</h1>
+    <h1 id="artist-name">Семён Чупин</h1>
     <p>Художник • Творец • Выдающийся деятель культуры и Искусства России 2023-2025</p>
   </header>
 
   <main>
+    <h2>Добро пожаловать на сайт!</h2>
+    <p>Здесь собраны мои картины, видео, статьи и можно приобрести часовое видео, где я раскрываю все свои секреты живописи. Всё создано с любовью и страстью ♥️🔥</p>
     
-   <div style="margin:40px 0;">
-      <a href="gallery.html" class="btn btn-gal">🖼Галерея</a> 
-     
-      <a href="articles.html" class="btn btn-about">💖 Репортажи</a>
-     
-      <a href="video.html" class="btn btn-video">🎬 Видео</a>
-      <a href="exhibitions.html" class="btn btn-exh">🏛 Выставки</a>
-      <a href="contacts.html" class="btn btn-course">🎨 Курсы/Заказы</a>
-      <a href="about.html" class="btn btn-about">💖 Обо мне</a>
+    <div>
+      <a href="gallery.html" class="btn">🖼 Галерея</a> 
+      <a href="articles.html" class="btn">💖 Репортажи</a>
+      <a href="video.html" class="btn">🎬 Видео</a>
+      <a href="exhibitions.html" class="btn">🏛 Выставки</a>
+      <a href="contacts.html" class="btn">🎨 Курсы/Заказы</a>
+      <a href="about.html" class="btn">💖 Обо мне</a>
       <a href="shop.html" class="buy-btn">💰 Купить курс</a>
     </div>
-    <h2 style="margin-top:50px;">Добро пожаловать на сайт!</h2>
-    <p>Здесь собраны мои картины, видео, статьи и можно приобрести часовое видео, где я рассказываю все свои секреты живописи. Всё создано с любовью и страстью ♥️🔥</p> 
-    
   </main>
 
   <footer>
@@ -232,6 +169,7 @@ button:hover, .button:hover {
      
        
    
+
 
 
 
