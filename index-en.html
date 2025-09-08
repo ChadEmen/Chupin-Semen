@@ -24,8 +24,24 @@ h1, h2, h3 {
 h1 { font-size: 48px; }
 h2 { font-size: 30px; }
 h3 { font-size: 30px; }
+/* Для кнопок */
+button, .button {
+  font-family: 'Pacifico', cursive;
+  font-size: 20px; /* Размер текста на кнопках */
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border: 2px solid #222;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-  <style>
+button:hover, .button:hover {
+  background-color: #222;
+  color: #fff;
+  transform: scale(1.05);
+}
+  /* Стиль кнопки переключения языка */
     .lang-btn {
       display:inline-block;
       padding:8px 14px;
@@ -43,12 +59,11 @@ h3 { font-size: 30px; }
       background:rgba(255,200,100,0.6); /* чуть ярче при наведении */
       transform:scale(1.05);
     }
-  </style>
+</style>
 </head>
 <body>
-  
   <div style="text-align:right; margin:10px;">
-  <a href="index.html"class="lang-btn">🇷🇺 Russian</a>
+  <a href="index.html" class="lang-btn">🇷🇺 Russian</a>
   </div>
   <style>
     body {
@@ -141,6 +156,8 @@ h3 { font-size: 30px; }
       box-shadow:0 0 40px rgba(255,0,0,1), 0 0 80px rgba(255,80,0,1);
     }
     </style>
+   </head>
+   <body>
 
   <header>
     <h1>Semyon Chupin</h1>
@@ -180,6 +197,7 @@ h3 { font-size: 30px; }
 
 </body>
 </html>
+
 
 
 
