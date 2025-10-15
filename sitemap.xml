@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Главная страница: художник Чупин Семён -->
+  <url>
+    <loc>https://chademen.github.io/Chupin-Semen/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <news:keywords>
+      художник, курс по живописи купить, Чупин Семён, выдающийся деятель культуры и искусства России,
+      художник Курск, член Союза художников России, член Союза профессиональных художников России,
+      Курский талант, живопись маслом, уроки искусства, онлайн-курс живопись
+    </news:keywords>
+  </url>
+
+  <!-- Галерея работ -->
+  <url>
+    <loc>https://chademen.github.io/Chupin-Semen/gallery.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <news:keywords>
+      картины, галерея, современное искусство, живопись Курск, художник Семён Чупин,
+      купить картину, искусство России, выставки Курск, авторская живопись
+    </news:keywords>
+  </url>
+
+  <!-- Видео / курс -->
+  <url>
+    <loc>https://chademen.github.io/Chupin-Semen/video.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <news:keywords>
+      курс по живописи, обучение живописи, Чупин Семён, видеоуроки, творческое развитие,
+      художник онлайн, арт-курс, живопись для начинающих
+    </news:keywords>
+  </url>
+
+  <!-- Магазин / покупка курса -->
+  <url>
+    <loc>https://chademen.github.io/Chupin-Semen/shop.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <news:keywords>
+      купить курс живописи, искусство, художник Курск, Чупин Семён, выдающийся деятель культуры России,
+      картины, арт-магазин, обучение творчеству, подарок художнику
+    </news:keywords>
+  </url>
+
+  <!-- Выставки -->
+  <url>
+    <loc>https://chademen.github.io/Chupin-Semen/exhibitions.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <news:keywords>
+      выставки Курск, персональная выставка, живопись, художник России, творчество,
+      Чупин Семён, культурные события, искусство, экспозиции
+    </news:keywords>
+  </url>
+
+  <!-- Статьи / публикации -->
+  <url>
+    <loc>https://chademen.github.io/Chupin-Semen/articles.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <news:keywords>
+      статьи об искусстве, Чупин Семён, художник Курск, культура России,
+      живопись маслом, философия творчества, интервью художников
+    </news:keywords>
+  </url>
+
+  <!-- О художнике -->
+  <url>
+    <loc>https://chademen.github.io/Chupin-Semen/about.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <news:keywords>
+      биография художника, Семён Чупин, выдающийся деятель культуры и искусства России,
+      художник Курск, член Союза художников России, член Союза профессиональных художников России,
+      путь художника, вдохновение
+    </news:keywords>
+  </url>
+
+  <!-- Контакты -->
+  <url>
+    <loc>https://chademen.github.io/Chupin-Semen/contacts.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <news:keywords>
+      контакты художника, купить картину, записаться на курс, Курск,
+      Семён Чупин, сотрудничество, искусство России
+    </news:keywords>
+  </url>
+
+  <!-- Документы / достижения -->
+  <url>
+    <loc>https://chademen.github.io/Chupin-Semen/documents.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <news:keywords>
+      документы, награды, выдающийся деятель культуры, Министерство культуры России,
+      стипендия художнику, признание, творчество, достижения Семёна Чупина
+    </news:keywords>
+  </url>
+
+  <!-- Английская версия -->
+  <url>
+    <loc>https://chademen.github.io/Chupin-Semen/index-en.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <news:keywords>
+      artist Semen Chupin, Russian artist, art course, painting lessons, buy painting course,
+      outstanding figure of Russian culture, exhibitions Kursk, fine art
+    </news:keywords>
+  </url>
+
+</urlset>
+
