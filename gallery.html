@@ -9,104 +9,105 @@
 <meta name="description" content="Галерея картин Семёна Чупина — живопись маслом, портреты, пейзажи, символизм, современное искусство. Купить картины, заказать портрет, уроки рисования. Репортажи, Видео, Выставки. Semen Chupin — fine art gallery, oil painting, portraits, landscapes, buy painting, order portrait, online art lessons, reports, videos, exhibitions.">
 <meta name="keywords" content="Семён Чупин, картины, живопись маслом, купить картину, заказать картину, портрет на заказ, пейзажи, современное искусство, art, painting, oil painting, fine art, gallery, portraits, landscapes, buy painting, order portrait, online lessons, creativity, reports, videos, exhibitions">
 <link rel="canonical" href="https://chademen.github.io/Chupin-Semen/gallery.html">
+<title>Галерея картин — Семён Чупин</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Lightbox2 -->
+<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
-  <meta charset="UTF-8">
-  <title>Галерея картин — Семён Чупин</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
-    h1 {
-      margin: 40px 0 20px;
-      font-size: 32px;
-      color: #ffcc70;
-      text-shadow: 0 0 10px rgba(255,200,100,0.9);
-    }
+h1 {
+  margin: 40px 0 20px;
+  font-size: 32px;
+  color: #ffcc70;
+  text-shadow: 0 0 10px rgba(255,200,100,0.9);
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      padding: 20px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
 
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
 
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+.gallery img:hover {
+  transform: scale(1.05);
+}
 
-    .links {
-      margin: 40px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
+.links {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
-    .btn-report {
-      display: inline-block;
-      padding: 15px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #fff;
-      border-radius: 12px;
-      text-decoration: none;
-      position: relative;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.btn-report {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    /* Градиенты с переливом */
-    .insta { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); animation: pulse1 2s infinite; }
-    .tg { background: linear-gradient(45deg,#00aced,#0088cc); animation: pulse2 2.5s infinite; }
-    .vk { background: linear-gradient(45deg,#4c75a3,#81a8c7); animation: pulse3 3s infinite; }
-    .yt { background: linear-gradient(45deg,#FF0000,#FF6347); animation: pulse4 2.8s infinite; }
-    .ok { background: linear-gradient(45deg,#ee8208,#ffb347); animation: pulse5 2.2s infinite; }
-    .dzen { background: linear-gradient(45deg,#ffde00,#f7a600); animation: pulse6 3s infinite; }
-    .takt { background: linear-gradient(45deg,#ff4e50,#f9d423); animation: pulse7 2.6s infinite; }
+/* Градиенты с переливом */
+.insta { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); animation: pulse1 2s infinite; }
+.tg { background: linear-gradient(45deg,#00aced,#0088cc); animation: pulse2 2.5s infinite; }
+.vk { background: linear-gradient(45deg,#4c75a3,#81a8c7); animation: pulse3 3s infinite; }
+.yt { background: linear-gradient(45deg,#FF0000,#FF6347); animation: pulse4 2.8s infinite; }
+.ok { background: linear-gradient(45deg,#ee8208,#ffb347); animation: pulse5 2.2s infinite; }
+.dzen { background: linear-gradient(45deg,#ffde00,#f7a600); animation: pulse6 3s infinite; }
+.takt { background: linear-gradient(45deg,#ff4e50,#f9d423); animation: pulse7 2.6s infinite; }
 
-    /* Пульсация */
-    @keyframes pulse1 {0%,100%{transform:scale(1);}50%{transform:scale(1.12);}}
-    @keyframes pulse2 {0%,100%{transform:scale(1);}50%{transform:scale(1.10);}}
-    @keyframes pulse3 {0%,100%{transform:scale(1);}50%{transform:scale(1.14);}}
-    @keyframes pulse4 {0%,100%{transform:scale(1);}50%{transform:scale(1.13);}}
-    @keyframes pulse5 {0%,100%{transform:scale(1);}50%{transform:scale(1.11);}}
-    @keyframes pulse6 {0%,100%{transform:scale(1);}50%{transform:scale(1.15);}}
-    @keyframes pulse7 {0%,100%{transform:scale(1);}50%{transform:scale(1.12);}}
+/* Пульсация */
+@keyframes pulse1 {0%,100%{transform:scale(1);}50%{transform:scale(1.12);}}
+@keyframes pulse2 {0%,100%{transform:scale(1);}50%{transform:scale(1.10);}}
+@keyframes pulse3 {0%,100%{transform:scale(1);}50%{transform:scale(1.14);}}
+@keyframes pulse4 {0%,100%{transform:scale(1);}50%{transform:scale(1.13);}}
+@keyframes pulse5 {0%,100%{transform:scale(1);}50%{transform:scale(1.11);}}
+@keyframes pulse6 {0%,100%{transform:scale(1);}50%{transform:scale(1.15);}}
+@keyframes pulse7 {0%,100%{transform:scale(1);}50%{transform:scale(1.12);}}
 
-    /* Вибрация при нажатии во все стороны */
-    .btn-report:active {
-      animation: vibrate 0.2s infinite;
-    }
-    @keyframes vibrate {
-      0%{transform:translate(0,0) rotate(0deg);}
-      20%{transform:translate(-2px,2px) rotate(-1deg);}
-      40%{transform:translate(2px,-2px) rotate(1deg);}
-      60%{transform:translate(-2px,2px) rotate(-1deg);}
-      80%{transform:translate(2px,-2px) rotate(1deg);}
-      100%{transform:translate(0,0) rotate(0deg);}
-    }
+.btn-report:active {
+  animation: vibrate 0.2s infinite;
+}
+@keyframes vibrate {
+  0%{transform:translate(0,0) rotate(0deg);}
+  20%{transform:translate(-2px,2px) rotate(-1deg);}
+  40%{transform:translate(2px,-2px) rotate(1deg);}
+  60%{transform:translate(-2px,2px) rotate(-1deg);}
+  80%{transform:translate(2px,-2px) rotate(1deg);}
+  100%{transform:translate(0,0) rotate(0deg);}
+}
 
-    /* Сияние при наведении */
-    .btn-report:hover {
-      transform: scale(1.15);
-      box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(255,255,255,0.4);
-    }
-  </style>
+.btn-report:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(255,255,255,0.4);
+}
+</style>
 </head>
 <body>
 <a href="gallery-en.html" class="btn-report tg">🇬🇧 English</a>   
@@ -114,90 +115,101 @@
 <h1>Галерея моих картин</h1>
 
 <div class="gallery">
-    <img src="images/hero.jpg" alt="Картина 1">
-    <img src="images/kartina2.jpg" alt="Картина 2">
-    <img src="images/kartina3.jpg" alt="Картина 3">
-    <img src="images/kartina4.jpg" alt="Картина 4">
-    <img src="images/kartina5.jpg" alt="Картина 5">
-    <img src="images/kartina6.jpg" alt="Картина 6">
-    <img src="images/kartina7.jpg" alt="Картина 7">
-    <img src="images/kartina8.jpg" alt="Картина 8">
-    <img src="images/kartina9.jpg" alt="Картина 9">
-    <img src="images/kartina10.jpg" alt="Картина 10">
-    <img src="images/kartina11.jpg" alt="Картина 11">
-    <img src="images/kartina12.jpg" alt="Картина 12">
-    <img src="images/kartina13.jpg" alt="Картина 13">
-    <img src="images/kartina14.jpg" alt="Картина 14">
-    <img src="images/kartina15.jpg" alt="Картина 15">
-    <img src="images/kartina16.jpg" alt="Картина 16">
-    <img src="images/kartina17.jpg" alt="Картина 17">
-    <img src="images/kartina18.jpg" alt="Картина 18">
-    <img src="images/kartina19.jpg" alt="Картина 19">
-    <img src="images/kartina20.jpg" alt="Картина 20">
-    <img src="images/kartina21.jpg" alt="Картина 21">
-    <img src="images/kartina22.jpg" alt="Картина 22">
-    <img src="images/kartina23.jpg" alt="Картина 23">
-    <img src="images/kartina24.jpg" alt="Картина 24">
-    <img src="images/kartina25.jpg" alt="Картина 25">
-    <img src="images/kartina26.jpg" alt="Картина 26">
-    <img src="images/kartina27.jpg" alt="Картина 27">
-    <img src="images/kartina28.jpg" alt="Картина 28">
-    <img src="images/kartina29.jpg" alt="Картина 29">
-    <img src="images/kartina30.jpg" alt="Картина 30">
-    <img src="images/kartina31.jpg" alt="Картина 31">
-    <img src="images/kartina32.jpg" alt="Картина 32">
-    <img src="images/kartina33.jpg" alt="Картина 33">
-    <img src="images/kartina34.jpg" alt="Картина 34"> 
-    <img src="images/kartina35.jpg" alt="Картина 35">
-    <img src="images/kartina36.jpg" alt="Картина 36">
-    <img src="images/kartina37.jpg" alt="Картина 37">
-    <img src="images/kartina38.jpg" alt="Картина 38">
-    <img src="images/kartina40.jpg" alt="Картина 40">
-    <img src="images/kartina41.jpg" alt="Картина 41">
-    <img src="images/kartina42.jpg" alt="Картина 42">
-    <img src="images/kartina43.jpg" alt="Картина 43">
-    <img src="images/kartina44.jpg" alt="Картина 44">
-    <img src="images/kartina45.jpg" alt="Картина 45">
-    <img src="images/kartina46.jpg" alt="Картина 46">
-    <img src="images/kartina47.jpg" alt="Картина 47">
-    <img src="images/kartina48.jpg" alt="Картина 48">
-    <img src="images/kartina49.jpg" alt="Картина 49">
-    <img src="images/kartina50.jpg" alt="Картина 50">
-    <img src="images/kartina51.jpg" alt="Картина 51">
-    <img src="images/kartina52.jpg" alt="Картина 52">
-    <img src="images/kartina53.jpg" alt="Картина 53">
-    <img src="images/kartina54.jpg" alt="Картина 54">
-    <img src="images/kartina55.jpg" alt="Картина 55">
-    <img src="images/kartina56.jpg" alt="Картина 56">
-    <img src="images/kartina57.jpg" alt="Картина 57">
-    <img src="images/kartina58.jpg" alt="Картина 58">
-    <img src="images/kartina59.jpg" alt="Картина 59">
-    <img src="images/kartina60.jpg" alt="Картина 60">
-    <img src="images/kartina61.jpg" alt="Картина 61">
-    <img src="images/kartina62.jpg" alt="Картина 62">
-    <img src="images/kartina63.jpg" alt="Картина 63">
-    <img src="images/kartina64.jpg" alt="Картина 64">
-    <img src="images/kartina65.jpg" alt="Картина 65">
-    <img src="images/kartina66.jpg" alt="Картина 66">
-    <img src="images/kartina67.jpg" alt="Картина 67">
-    <img src="images/kartina68.jpg" alt="Картина 68">
-    <img src="images/kartina69.jpg" alt="Картина 69">
-    <img src="images/kartina70.jpg" alt="Картина 70">
-    <img src="images/kartina71.jpg" alt="Картина 71">
-    <img src="images/kartina72.jpg" alt="Картина 72">
-    <img src="images/kartina73.jpg" alt="Картина 73">
-    <img src="images/kartina74.jpg" alt="Картина 74">
-    <img src="images/kartina75.jpg" alt="Картина 75">
-    <img src="images/kartina76.jpg" alt="Картина 76">
-    <img src="images/kartina77.jpg" alt="Картина 77">
-    <img src="images/kartina78.jpg" alt="Картина 78">
-    <img src="images/kartina79.jpg" alt="Картина 79">
-    <img src="images/kartina80.jpg" alt="Картина 80">
-    <img src="images/kartina81.jpg" alt="Картина 81">
-    <img src="images/kartina82.jpg" alt="Картина 82">
-    <img src="images/kartina83.jpg" alt="Картина 83">
-    <img src="images/kartina84.jpg" alt="Картина 84">
-    <img src="images/kartina85.jpg" alt="Картина 85">
+
+
+<a href="images/hero.jpg" data-lightbox="gallery" data-title="Герой"></a>
+<a href="images/kartina1.jpg" data-lightbox="gallery" data-title="Картина 1"></a>
+<a href="images/kartina2.jpg" data-lightbox="gallery" data-title="Картина 2"></a>
+<a href="images/kartina3.jpg" data-lightbox="gallery" data-title="Картина 3"></a>
+<a href="images/kartina4.jpg" data-lightbox="gallery" data-title="Картина 4"></a>
+<a href="images/kartina5.jpg" data-lightbox="gallery" data-title="Картина 5"></a>
+<a href="images/kartina6.jpg" data-lightbox="gallery" data-title="Картина 6"></a>
+<a href="images/kartina7.jpg" data-lightbox="gallery" data-title="Картина 7"></a>
+<a href="images/kartina8.jpg" data-lightbox="gallery" data-title="Картина 8"></a>
+<a href="images/kartina9.jpg" data-lightbox="gallery" data-title="Картина 9"></a>
+<a href="images/kartina10.jpg" data-lightbox="gallery" data-title="Картина 10"></a>
+<a href="images/kartina11.jpg" data-lightbox="gallery" data-title="Картина 11"></a>
+<a href="images/kartina12.jpg" data-lightbox="gallery" data-title="Картина 12"></a>
+<a href="images/kartina13.jpg" data-lightbox="gallery" data-title="Картина 13"></a>
+<a href="images/kartina14.jpg" data-lightbox="gallery" data-title="Картина 14"></a>
+<a href="images/kartina15.jpg" data-lightbox="gallery" data-title="Картина 15"></a>
+<a href="images/kartina16.jpg" data-lightbox="gallery" data-title="Картина 16"></a>
+<a href="images/kartina17.jpg" data-lightbox="gallery" data-title="Картина 17"></a>
+<a href="images/kartina18.jpg" data-lightbox="gallery" data-title="Картина 18"></a>
+<a href="images/kartina19.jpg" data-lightbox="gallery" data-title="Картина 19"></a>
+<a href="images/kartina20.jpg" data-lightbox="gallery" data-title="Картина 20"></a>
+<a href="images/kartina21.jpg" data-lightbox="gallery" data-title="Картина 21"></a>
+<a href="images/kartina22.jpg" data-lightbox="gallery" data-title="Картина 22"></a>
+<a href="images/kartina23.jpg" data-lightbox="gallery" data-title="Картина 23"></a>
+<a href="images/kartina24.jpg" data-lightbox="gallery" data-title="Картина 24"></a>
+<a href="images/kartina25.jpg" data-lightbox="gallery" data-title="Картина 25"></a>
+<a href="images/kartina26.jpg" data-lightbox="gallery" data-title="Картина 26"></a>
+<a href="images/kartina27.jpg" data-lightbox="gallery" data-title="Картина 27"></a>
+<a href="images/kartina28.jpg" data-lightbox="gallery" data-title="Картина 28"></a>
+<a href="images/kartina29.jpg" data-lightbox="gallery" data-title="Картина 29"></a>
+<a href="images/kartina30.jpg" data-lightbox="gallery" data-title="Картина 30"></a>
+<a href="images/kartina31.jpg" data-lightbox="gallery" data-title="Картина 31"></a>
+<a href="images/kartina32.jpg" data-lightbox="gallery" data-title="Картина 32"></a>
+<a href="images/kartina33.jpg" data-lightbox="gallery" data-title="Картина 33"></a>
+<a href="images/kartina34.jpg" data-lightbox="gallery" data-title="Картина 34"></a>
+<a href="images/kartina35.jpg" data-lightbox="gallery" data-title="Картина 35"></a>
+<a href="images/kartina36.jpg" data-lightbox="gallery" data-title="Картина 36"></a>
+<a href="images/kartina37.jpg" data-lightbox="gallery" data-title="Картина 37"></a>
+<a href="images/kartina38.jpg" data-lightbox="gallery" data-title="Картина 38"></a>
+<a href="images/kartina39.jpg" data-lightbox="gallery" data-title="Картина 39"></a>
+<a href="images/kartina40.jpg" data-lightbox="gallery" data-title="Картина 40"></a>
+<a href="images/kartina41.jpg" data-lightbox="gallery" data-title="Картина 41"></a>
+<a href="images/kartina42.jpg" data-lightbox="gallery" data-title="Картина 42"></a>
+<a href="images/kartina43.jpg" data-lightbox="gallery" data-title="Картина 43"></a>
+<a href="images/kartina44.jpg" data-lightbox="gallery" data-title="Картина 44"></a>
+<a href="images/kartina45.jpg" data-lightbox="gallery" data-title="Картина 45"></a>
+<a href="images/kartina46.jpg" data-lightbox="gallery" data-title="Картина 46"></a>
+<a href="images/kartina47.jpg" data-lightbox="gallery" data-title="Картина 47"></a>
+<a href="images/kartina48.jpg" data-lightbox="gallery" data-title="Картина 48"></a>
+<a href="images/kartina49.jpg" data-lightbox="gallery" data-title="Картина 49"></a>
+<a href="images/kartina50.jpg" data-lightbox="gallery" data-title="Картина 50"></a>
+<a href="images/kartina51.jpg" data-lightbox="gallery" data-title="Картина 51"></a>
+<a href="images/kartina52.jpg" data-lightbox="gallery" data-title="Картина 52"></a>
+<a href="images/kartina53.jpg" data-lightbox="gallery" data-title="Картина 53"></a>
+<a href="images/kartina54.jpg" data-lightbox="gallery" data-title="Картина 54"></a>
+<a href="images/kartina55.jpg" data-lightbox="gallery" data-title="Картина 55"></a>
+<a href="images/kartina56.jpg" data-lightbox="gallery" data-title="Картина 56"></a>
+<a href="images/kartina57.jpg" data-lightbox="gallery" data-title="Картина 57"></a>
+<a href="images/kartina58.jpg" data-lightbox="gallery" data-title="Картина 58"></a>
+<a href="images/kartina59.jpg" data-lightbox="gallery" data-title="Картина 59"></a>
+<a href="images/kartina60.jpg" data-lightbox="gallery" data-title="Картина 60"></a>
+<a href="images/kartina61.jpg" data-lightbox="gallery" data-title="Картина 61"></a>
+<a href="images/kartina62.jpg" data-lightbox="gallery" data-title="Картина 62"></a>
+<a href="images/kartina63.jpg" data-lightbox="gallery" data-title="Картина 63"></a>
+<a href="images/kartina64.jpg" data-lightbox="gallery" data-title="Картина 64"></a>
+<a href="images/kartina65.jpg" data-lightbox="gallery" data-title="Картина 65"></a>
+<a href="images/kartina66.jpg" data-lightbox="gallery" data-title="Картина 66"></a>
+<a href="images/kartina67.jpg" data-lightbox="gallery" data-title="Картина 67"></a>
+<a href="images/kartina68.jpg" data-lightbox="gallery" data-title="Картина 68"></a>
+<a href="images/kartina69.jpg" data-lightbox="gallery" data-title="Картина 69"></a>
+<a href="images/kartina70.jpg" data-lightbox="gallery" data-title="Картина 70"></a>
+<a href="images/kartina71.jpg" data-lightbox="gallery" data-title="Картина 71"></a>
+<a href="images/kartina72.jpg" data-lightbox="gallery" data-title="Картина 72"></a>
+<a href="images/kartina73.jpg" data-lightbox="gallery" data-title="Картина 73"></a>
+<a href="images/kartina74.jpg" data-lightbox="gallery" data-title="Картина 74"></a>
+<a href="images/kartina75.jpg" data-lightbox="gallery" data-title="Картина 75"></a>
+<a href="images/kartina76.jpg" data-lightbox="gallery" data-title="Картина 76"></a>
+<a href="images/kartina77.jpg" data-lightbox="gallery" data-title="Картина 77"></a>
+<a href="images/kartina78.jpg" data-lightbox="gallery" data-title="Картина 78"></a>
+<a href="images/kartina79.jpg" data-lightbox="gallery" data-title="Картина 79"></a>
+<a href="images/kartina80.jpg" data-lightbox="gallery" data-title="Картина 80"></a>
+<a href="images/kartina81.jpg" data-lightbox="gallery" data-title="Картина 81"></a>
+<a href="images/kartina82.jpg" data-lightbox="gallery" data-title="Картина 82"></a>
+<a href="images/kartina83.jpg" data-lightbox="gallery" data-title="Картина 83"></a>
+<a href="images/kartina84.jpg" data-lightbox="gallery" data-title="Картина 84"></a>
+<a href="images/kartina85.jpg" data-lightbox="gallery" data-title="Картина 85"></a>
+<a href="images/kartina86.jpg" data-lightbox="gallery" data-title="Картина 86"></a>
+<a href="images/kartina87.jpg" data-lightbox="gallery" data-title="Картина 87"></a>
+<a href="images/kartina88.jpg" data-lightbox="gallery" data-title="Картина 88"></a>
+<a href="images/kartina89.jpg" data-lightbox="gallery" data-title="Картина 89"></a>
+<a href="images/kartina90.jpg" data-lightbox="gallery" data-title="Картина 90"></a>
+
+
 </div>
 
 <div class="links">
@@ -207,8 +219,8 @@
   <a href="https://youtube.com/@chupin-semen?si=jI6PTKuQo-UH4aAN" target="_blank" class="btn-report yt">Видео на YouTube</a>
   
   <h1>💰 Купить курс живописи</h1>
-    <p>Нажмите на кнопку ниже, чтобы перейти в закрытый канал с эксклюзивными видео-уроками:</p>
-    <a href="https://t.me/tribute/app?startapp=sB4C" target="_blank" class="btn-report takt">💰 Купить курс</a>
+  <p>Нажмите на кнопку ниже, чтобы перейти в закрытый канал с эксклюзивными видео-уроками:</p>
+  <a href="https://t.me/tribute/app?startapp=sB4C" target="_blank" class="btn-report takt">💰 Купить курс</a>
   <a href="index.html" class="btn-report ok">⬅️ Назад</a>
 </div>
 
