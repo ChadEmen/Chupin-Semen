@@ -192,33 +192,59 @@
 }
 .gallery-grid img {
   width: 250px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
 }
 .gallery-grid img:hover {
   box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
+.fullscreen-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+  overflow: hidden;
+}
+.fullscreen-view img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 </style>
 
 <script>
 document.querySelectorAll('.gallery-grid img').forEach(img => {
-  let clickCount = 0;
   img.addEventListener('click', () => {
-    clickCount++;
-    if (clickCount === 1) {
-      img.style.transform = 'scale(1.8)';
-      img.style.zIndex = '10';
-      img.style.position = 'relative';
-    } else if (clickCount === 2) {
-      img.style.transform = 'scale(2.3)';
-    } else {
-      img.style.transform = 'scale(1)';
-      img.style.zIndex = '';
-      img.style.position = '';
-      clickCount = 0;
-    }
+    const overlay = document.createElement('div');
+    overlay.classList.add('fullscreen-view');
+    const zoomedImg = document.createElement('img');
+    zoomedImg.src = img.src;
+    overlay.appendChild(zoomedImg);
+    document.body.appendChild(overlay);
+    let zoom = 1;
+
+    overlay.addEventListener('click', () => {
+      zoom++;
+      if (zoom === 2) {
+        zoomedImg.style.transform = 'scale(1.4)';
+      } else if (zoom === 3) {
+        zoomedImg.style.transform = 'scale(1.8)';
+      } else {
+        overlay.remove();
+      }
+    });
   });
 });
 </script>
@@ -243,6 +269,7 @@ document.querySelectorAll('.gallery-grid img').forEach(img => {
 
 </body>
 </html>
+
 
 
 
