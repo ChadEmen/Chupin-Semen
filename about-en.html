@@ -160,14 +160,105 @@
   </header></p>
 
     <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;">
-      <img src="images/diplom.jpg" alt="diplom" style="width:250px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
-      <img src="images/gramota.jpg" alt="gramota" style="width:250px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
-      <img src="images/chlen-soyuza.jpg" alt="chlen-soyuza" style="width:250px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
-      <img src="images/pismo-minkult.jpg" alt="pismo-minkult" style="width:250px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
-      <img src="images/vip-zhurnal1.jpg" alt="vip-zhurnal1, фото 1" style="width:250px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
-      <img src="images/vip-zhurnal2.jpg" alt="vip-zhurnal2, фото 2" style="width:250px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
-      <img src="images/kur-izvestnik.jpg" alt="kur-izvestnik" style="width:250px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
-      <!-- Тут можно добавить отзывы с выставки, если нужно -->
+     <style>
+.documents-gallery {
+  text-align: center;
+  margin-top: 30px;
+}
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.gallery-grid img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
+}
+.gallery-grid img:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
+.fullscreen-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+  overflow: hidden;
+}
+.fullscreen-view img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+</style>
+
+<script>
+document.querySelectorAll('.gallery-grid img').forEach(img => {
+  img.addEventListener('click', () => {
+    const overlay = document.createElement('div');
+    overlay.classList.add('fullscreen-view');
+
+    const zoomedImg = document.createElement('img');
+    zoomedImg.src = img.src;
+    overlay.appendChild(zoomedImg);
+    document.body.appendChild(overlay);
+
+    let scale = 1;
+    let isDragging = false;
+    let startX, startY, translateX = 0, translateY = 0;
+
+    // Масштаб колесиком
+    overlay.addEventListener('wheel', e => {
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? 0.1 : -0.1;
+      scale = Math.min(Math.max(1, scale + delta), 3);
+      zoomedImg.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+    });
+
+    // Перемещение мышью
+    zoomedImg.addEventListener('mousedown', e => {
+      isDragging = true;
+      startX = e.clientX - translateX;
+      startY = e.clientY - translateY;
+      zoomedImg.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      translateX = e.clientX - startX;
+      translateY = e.clientY - startY;
+      zoomedImg.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+      zoomedImg.style.cursor = 'grab';
+    });
+
+    // Закрытие по клику на фон или клавише Esc
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) overlay.remove();
+    });
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') overlay.remove();
+    });
+  });
+});
+</script>
+
     </div>
 
   </main>
@@ -187,6 +278,7 @@
 
 </body>
 </html>
+
 
 
 
