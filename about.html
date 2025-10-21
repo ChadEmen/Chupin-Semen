@@ -229,25 +229,55 @@ document.querySelectorAll('.gallery-grid img').forEach(img => {
   img.addEventListener('click', () => {
     const overlay = document.createElement('div');
     overlay.classList.add('fullscreen-view');
+
     const zoomedImg = document.createElement('img');
     zoomedImg.src = img.src;
     overlay.appendChild(zoomedImg);
     document.body.appendChild(overlay);
-    let zoom = 1;
 
-    overlay.addEventListener('click', () => {
-      zoom++;
-      if (zoom === 2) {
-        zoomedImg.style.transform = 'scale(1.4)';
-      } else if (zoom === 3) {
-        zoomedImg.style.transform = 'scale(1.8)';
-      } else {
-        overlay.remove();
-      }
+    let scale = 1;
+    let isDragging = false;
+    let startX, startY, translateX = 0, translateY = 0;
+
+    // Масштаб колесиком
+    overlay.addEventListener('wheel', e => {
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? 0.1 : -0.1;
+      scale = Math.min(Math.max(1, scale + delta), 3);
+      zoomedImg.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+    });
+
+    // Перемещение мышью
+    zoomedImg.addEventListener('mousedown', e => {
+      isDragging = true;
+      startX = e.clientX - translateX;
+      startY = e.clientY - translateY;
+      zoomedImg.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      translateX = e.clientX - startX;
+      translateY = e.clientY - startY;
+      zoomedImg.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+      zoomedImg.style.cursor = 'grab';
+    });
+
+    // Закрытие по клику на фон или клавише Esc
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) overlay.remove();
+    });
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') overlay.remove();
     });
   });
 });
 </script>
+
 
       <!-- Тут можно добавить отзывы с выставки, если нужно -->
     </div>
@@ -269,6 +299,7 @@ document.querySelectorAll('.gallery-grid img').forEach(img => {
 
 </body>
 </html>
+
 
 
 
