@@ -167,34 +167,17 @@
   </header></p>
 
     <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;">
-   <section class="documents-gallery">
+  <section class="documents-gallery">
   <div class="gallery-grid">
-    <a href="images/diplom.jpg" data-lightbox="docs" data-title="Диплом об образовании">
-      <img src="images/diplom.jpg" alt="Диплом об образовании">
-    </a>
-    <a href="images/gramota.jpg" data-lightbox="docs" data-title="Грамота">
-      <img src="images/gramota.jpg" alt="Грамота">
-    </a>
-    <a href="images/chlen-soyuza.jpg" data-lightbox="docs" data-title="Член профессионального союза художников">
-      <img src="images/chlen-soyuza.jpg" alt="Член профессионального союза художников">
-    </a>
-    <a href="images/pismo-minkult.jpg" data-lightbox="docs" data-title="Письмо из Минкультуры">
-      <img src="images/pismo-minkult.jpg" alt="Письмо из Минкультуры">
-    </a>
-    <a href="images/vip-zhurnal1.jpg" data-lightbox="docs" data-title="Журнал Вип, фото 1">
-      <img src="images/vip-zhurnal1.jpg" alt="Журнал Вип, фото 1">
-    </a>
-    <a href="images/vip-zhurnal2.jpg" data-lightbox="docs" data-title="Журнал Вип, фото 2">
-      <img src="images/vip-zhurnal2.jpg" alt="Журнал Вип, фото 2">
-    </a>
-    <a href="images/kur-izvestnik.jpg" data-lightbox="docs" data-title="Газета Курский известник">
-      <img src="images/kur-izvestnik.jpg" alt="Газета Курский известник">
-    </a>
+    <img src="images/diplom.jpg" alt="Диплом об образовании">
+    <img src="images/gramota.jpg" alt="Грамота">
+    <img src="images/chlen-soyuza.jpg" alt="Член профессионального союза художников">
+    <img src="images/pismo-minkult.jpg" alt="Письмо из Минкультуры">
+    <img src="images/vip-zhurnal1.jpg" alt="Журнал Вип, фото 1">
+    <img src="images/vip-zhurnal2.jpg" alt="Журнал Вип, фото 2">
+    <img src="images/kur-izvestnik.jpg" alt="Газета Курский известник">
   </div>
 </section>
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 <style>
 .documents-gallery {
@@ -212,12 +195,33 @@
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 .gallery-grid img:hover {
-  transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(0,0,0,0.7);
 }
 </style>
+
+<script>
+document.querySelectorAll('.gallery-grid img').forEach(img => {
+  let clickCount = 0;
+  img.addEventListener('click', () => {
+    clickCount++;
+    if (clickCount === 1) {
+      img.style.transform = 'scale(1.8)';
+      img.style.zIndex = '10';
+      img.style.position = 'relative';
+    } else if (clickCount === 2) {
+      img.style.transform = 'scale(2.3)';
+    } else {
+      img.style.transform = 'scale(1)';
+      img.style.zIndex = '';
+      img.style.position = '';
+      clickCount = 0;
+    }
+  });
+});
+</script>
 
       <!-- Тут можно добавить отзывы с выставки, если нужно -->
     </div>
@@ -239,6 +243,7 @@
 
 </body>
 </html>
+
 
 
 
