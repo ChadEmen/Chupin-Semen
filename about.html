@@ -180,102 +180,139 @@
 </section>
 
 <style>
-.documents-gallery {
-  text-align: center;
-  margin-top: 30px;
-}
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-.gallery-grid img {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  object-fit: contain;
-}
-.gallery-grid img:hover {
-  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
-}
-.fullscreen-view {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  cursor: zoom-out;
-  overflow: hidden;
-}
-.fullscreen-view img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
+  .doc-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    perspective: 1000px;
+    margin-top: 40px;
+  }
+
+  .doc-card {
+    width: 260px;
+    height: 360px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transform: rotateY(calc(var(--rx, 0deg))) rotateX(calc(var(--ry, 0deg)));
+    transition: transform 0.5s, box-shadow 0.5s;
+    cursor: pointer;
+  }
+
+  .doc-card:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  }
+
+  .doc-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Viewer */
+  .viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+  }
+
+  .viewer.active {
+    display: flex;
+  }
+
+  .viewer img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: grab;
+    transition: transform 0.2s;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+  }
 </style>
 
+<div class="doc-gallery">
+  <div class="doc-card" style="--rx: -10deg; --ry: 8deg;">
+    <img src="images/doc1.jpg" alt="Документ 1">
+  </div>
+  <div class="doc-card" style="--rx: 12deg; --ry: -5deg;">
+    <img src="images/doc2.jpg" alt="Документ 2">
+  </div>
+  <div class="doc-card" style="--rx: -8deg; --ry: -10deg;">
+    <img src="images/doc3.jpg" alt="Документ 3">
+  </div>
+</div>
+
+<div class="viewer" id="viewer">
+  <span class="close-btn" id="closeBtn">&times;</span>
+  <img id="viewerImg" src="">
+</div>
+
 <script>
-document.querySelectorAll('.gallery-grid img').forEach(img => {
-  img.addEventListener('click', () => {
-    const overlay = document.createElement('div');
-    overlay.classList.add('fullscreen-view');
+  const cards = document.querySelectorAll('.doc-card');
+  const viewer = document.getElementById('viewer');
+  const viewerImg = document.getElementById('viewerImg');
+  const closeBtn = document.getElementById('closeBtn');
 
-    const zoomedImg = document.createElement('img');
-    zoomedImg.src = img.src;
-    overlay.appendChild(zoomedImg);
-    document.body.appendChild(overlay);
+  let scale = 1;
+  let isDragging = false;
+  let startX, startY, translateX = 0, translateY = 0;
 
-    let scale = 1;
-    let isDragging = false;
-    let startX, startY, translateX = 0, translateY = 0;
-
-    // Масштаб колесиком
-    overlay.addEventListener('wheel', e => {
-      e.preventDefault();
-      const delta = e.deltaY < 0 ? 0.1 : -0.1;
-      scale = Math.min(Math.max(1, scale + delta), 3);
-      zoomedImg.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
-    });
-
-    // Перемещение мышью
-    zoomedImg.addEventListener('mousedown', e => {
-      isDragging = true;
-      startX = e.clientX - translateX;
-      startY = e.clientY - translateY;
-      zoomedImg.style.cursor = 'grabbing';
-    });
-
-    window.addEventListener('mousemove', e => {
-      if (!isDragging) return;
-      translateX = e.clientX - startX;
-      translateY = e.clientY - startY;
-      zoomedImg.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
-    });
-
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-      zoomedImg.style.cursor = 'grab';
-    });
-
-    // Закрытие по клику на фон или клавише Esc
-    overlay.addEventListener('click', e => {
-      if (e.target === overlay) overlay.remove();
-    });
-    window.addEventListener('keydown', e => {
-      if (e.key === 'Escape') overlay.remove();
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      viewerImg.src = card.querySelector('img').src;
+      viewer.classList.add('active');
+      scale = 1;
+      translateX = translateY = 0;
+      viewerImg.style.transform = `translate(0px, 0px) scale(1)`;
     });
   });
-});
+
+  closeBtn.addEventListener('click', () => viewer.classList.remove('active'));
+
+  viewerImg.addEventListener('wheel', e => {
+    e.preventDefault();
+    const delta = e.deltaY < 0 ? 0.1 : -0.1;
+    scale = Math.min(Math.max(0.5, scale + delta), 5);
+    viewerImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+  });
+
+  viewerImg.addEventListener('mousedown', e => {
+    isDragging = true;
+    startX = e.clientX - translateX;
+    startY = e.clientY - translateY;
+    viewerImg.style.cursor = 'grabbing';
+  });
+
+  viewerImg.addEventListener('mouseup', () => {
+    isDragging = false;
+    viewerImg.style.cursor = 'grab';
+  });
+
+  viewerImg.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    translateX = e.clientX - startX;
+    translateY = e.clientY - startY;
+    viewerImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+  });
 </script>
 
 
@@ -299,6 +336,7 @@ document.querySelectorAll('.gallery-grid img').forEach(img => {
 
 </body>
 </html>
+
 
 
 
