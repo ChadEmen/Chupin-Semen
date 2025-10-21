@@ -267,52 +267,57 @@
 </div>
 
 <script>
-  const cards = document.querySelectorAll('.doc-card');
-  const viewer = document.getElementById('viewer');
-  const viewerImg = document.getElementById('viewerImg');
-  const closeBtn = document.getElementById('closeBtn');
+document.querySelectorAll('.gallery-grid img').forEach(img => {
+  img.addEventListener('click', () => {
+    const overlay = document.createElement('div');
+    overlay.classList.add('fullscreen-view');
 
-  let scale = 1;
-  let isDragging = false;
-  let startX, startY, translateX = 0, translateY = 0;
+    const zoomedImg = document.createElement('img');
+    zoomedImg.src = img.src;
+    overlay.appendChild(zoomedImg);
+    document.body.appendChild(overlay);
 
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      viewerImg.src = card.querySelector('img').src;
-      viewer.classList.add('active');
-      scale = 1;
-      translateX = translateY = 0;
-      viewerImg.style.transform = `translate(0px, 0px) scale(1)`;
+    let scale = 1;
+    let isDragging = false;
+    let startX, startY, translateX = 0, translateY = 0;
+
+    // Масштаб колесиком
+    overlay.addEventListener('wheel', e => {
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? 0.1 : -0.1;
+      scale = Math.min(Math.max(1, scale + delta), 3);
+      zoomedImg.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+    });
+
+    // Перемещение мышью
+    zoomedImg.addEventListener('mousedown', e => {
+      isDragging = true;
+      startX = e.clientX - translateX;
+      startY = e.clientY - translateY;
+      zoomedImg.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      translateX = e.clientX - startX;
+      translateY = e.clientY - startY;
+      zoomedImg.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+      zoomedImg.style.cursor = 'grab';
+    });
+
+    // Закрытие по клику на фон или клавише Esc
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) overlay.remove();
+    });
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') overlay.remove();
     });
   });
-
-  closeBtn.addEventListener('click', () => viewer.classList.remove('active'));
-
-  viewerImg.addEventListener('wheel', e => {
-    e.preventDefault();
-    const delta = e.deltaY < 0 ? 0.1 : -0.1;
-    scale = Math.min(Math.max(0.5, scale + delta), 5);
-    viewerImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-  });
-
-  viewerImg.addEventListener('mousedown', e => {
-    isDragging = true;
-    startX = e.clientX - translateX;
-    startY = e.clientY - translateY;
-    viewerImg.style.cursor = 'grabbing';
-  });
-
-  viewerImg.addEventListener('mouseup', () => {
-    isDragging = false;
-    viewerImg.style.cursor = 'grab';
-  });
-
-  viewerImg.addEventListener('mousemove', e => {
-    if (!isDragging) return;
-    translateX = e.clientX - startX;
-    translateY = e.clientY - startY;
-    viewerImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-  });
+});
 </script>
 
 
@@ -336,6 +341,7 @@
 
 </body>
 </html>
+
 
 
 
