@@ -167,89 +167,57 @@
   </header></p>
 
     <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;">
-    <div class="about-gallery">
-  <img src="images/diplom.jpg" alt="Диплом об образовании">
-  <img src="images/gramota.jpg" alt="Грамота">
-  <img src="images/chlen-soyuza.jpg" alt="Член профессионального союза художников">
-  <img src="images/pismo-minkult.jpg" alt="Письмо из Минкультуры">
-  <img src="images/vip-zhurnal1.jpg" alt="Журнал ВИП, фото 1">
-  <img src="images/vip-zhurnal2.jpg" alt="Журнал ВИП, фото 2">
-  <img src="images/kur-izvestnik.jpg" alt="Газета Курский известник">
-</div>
+   <section class="documents-gallery">
+  <div class="gallery-grid">
+    <a href="images/diplom.jpg" data-lightbox="docs" data-title="Диплом об образовании">
+      <img src="images/diplom.jpg" alt="Диплом об образовании">
+    </a>
+    <a href="images/gramota.jpg" data-lightbox="docs" data-title="Грамота">
+      <img src="images/gramota.jpg" alt="Грамота">
+    </a>
+    <a href="images/chlen-soyuza.jpg" data-lightbox="docs" data-title="Член профессионального союза художников">
+      <img src="images/chlen-soyuza.jpg" alt="Член профессионального союза художников">
+    </a>
+    <a href="images/pismo-minkult.jpg" data-lightbox="docs" data-title="Письмо из Минкультуры">
+      <img src="images/pismo-minkult.jpg" alt="Письмо из Минкультуры">
+    </a>
+    <a href="images/vip-zhurnal1.jpg" data-lightbox="docs" data-title="Журнал Вип, фото 1">
+      <img src="images/vip-zhurnal1.jpg" alt="Журнал Вип, фото 1">
+    </a>
+    <a href="images/vip-zhurnal2.jpg" data-lightbox="docs" data-title="Журнал Вип, фото 2">
+      <img src="images/vip-zhurnal2.jpg" alt="Журнал Вип, фото 2">
+    </a>
+    <a href="images/kur-izvestnik.jpg" data-lightbox="docs" data-title="Газета Курский известник">
+      <img src="images/kur-izvestnik.jpg" alt="Газета Курский известник">
+    </a>
+  </div>
+</section>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 <style>
-  .about-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .about-gallery img {
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-
-  .about-gallery img:hover {
-    transform: scale(1.05);
-  }
-
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 0.4s ease;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  .modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(255,255,255,0.2);
-    animation: zoomIn 0.4s ease;
-  }
-
-  @keyframes zoomIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-  }
+.documents-gallery {
+  text-align: center;
+  margin-top: 30px;
+}
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.gallery-grid img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
 </style>
-
-<script>
-  const galleryImages = document.querySelectorAll('.about-gallery img');
-  const modal = document.createElement('div');
-  modal.classList.add('modal');
-  const modalImg = document.createElement('img');
-  modal.appendChild(modalImg);
-  document.body.appendChild(modal);
-
-  galleryImages.forEach(img => {
-    img.addEventListener('click', () => {
-      modal.style.display = 'flex';
-      modalImg.src = img.src;
-    });
-  });
-
-  modal.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-</script>
 
       <!-- Тут можно добавить отзывы с выставки, если нужно -->
     </div>
@@ -271,6 +239,7 @@
 
 </body>
 </html>
+
 
 
 
