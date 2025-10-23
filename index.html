@@ -185,15 +185,15 @@ button:hover, .button:hover {
     <h1>Семён Чупин</h1>
     <p>Художник • Творец • Выдающийся деятель культуры и Искусства России 2023-2025</p>
   </header>
-  <!-- Плавное слайд-шоу -->
+ <!-- Плавное слайд-шоу с эффектом "живого дыхания" -->
 <div style="text-align:center; margin: 20px 0; position: relative; width:100%; max-width:1000px; height:400px; overflow:hidden;">
-    <img class="slide" src="images/kartina99.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:1; transition: opacity 1s;">
-    <img class="slide" src="images/kartina100.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition: opacity 1s;">
-    <img class="slide" src="images/kartina51.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition: opacity 1s;">
-    <img class="slide" src="images/kartina107.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition: opacity 1s;">
-    <img class="slide" src="images/kartina34.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition: opacity 1s;">
-    <img class="slide" src="images/kartina91.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition: opacity 1s;">
-    <img class="slide" src="images/kartina72.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition: opacity 1s;">
+    <img class="slide" src="images/kartina99.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:1; transform:scale(1); transition: opacity 1s ease-in-out, transform 8s ease-in-out;">
+    <img class="slide" src="images/kartina100.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transform:scale(1.05); transition: opacity 1s ease-in-out, transform 8s ease-in-out;">
+    <img class="slide" src="images/kartina51.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transform:scale(1); transition: opacity 1s ease-in-out, transform 8s ease-in-out;">
+    <img class="slide" src="images/kartina107.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transform:scale(1.05); transition: opacity 1s ease-in-out, transform 8s ease-in-out;">
+    <img class="slide" src="images/kartina34.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transform:scale(1); transition: opacity 1s ease-in-out, transform 8s ease-in-out;">
+    <img class="slide" src="images/kartina91.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transform:scale(1.05); transition: opacity 1s ease-in-out, transform 8s ease-in-out;">
+    <img class="slide" src="images/kartina72.jpg" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transform:scale(1); transition: opacity 1s ease-in-out, transform 8s ease-in-out;">
 </div>
 
 <script>
@@ -201,9 +201,15 @@ let slides = document.querySelectorAll('.slide');
 let current = 0;
 
 setInterval(() => {
-    slides[current].style.opacity = 0; // текущая исчезает
-    current = (current + 1) % slides.length; // следующая
-    slides[current].style.opacity = 1; // появляется новая
+    // текущий уходит
+    slides[current].style.opacity = 0;
+    slides[current].style.transform = 'scale(1.05)'; // плавно отдаляется
+
+    // следующий
+    current = (current + 1) % slides.length;
+    slides[current].style.opacity = 1;
+    slides[current].style.transform = 'scale(1)'; // приближается
+
 }, 5000); // каждые 5 секунд
 </script>
 
@@ -274,6 +280,7 @@ setInterval(() => {
 
 </body>
 </html>
+
 
 
 
