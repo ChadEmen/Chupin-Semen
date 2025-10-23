@@ -176,55 +176,58 @@ button:hover, .button:hover {
     <h1>Semyon Chupin</h1>
     <p>Artist • Creator • Outstanding Cultural and Art Figure of Russia 2023-2025</p>
   </header>
-   <style>
-  .slideshow {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-  }
-
-  .slideshow img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 110%;
-    height: 110%;
-    object-fit: cover;
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0;
-    transition: opacity 2s ease-in-out, transform 7s ease-in-out;
-  }
-
-  .slideshow img.active {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.05);
-  }
-</style>
-
-<div class="slideshow">
-  <img src="img/99.jpg" class="active">
-  <img src="img/100.jpg">
-  <img src="img/51.jpg">
-  <img src="img/107.jpg">
-  <img src="img/34.jpg">
-  <img src="img/91.jpg">
-  <img src="img/72.jpg">
+   <!-- Плавное слайд-шоу с эффектом дыхания и мягким размытием краёв -->
+<div style="display:flex; justify-content:center; margin:20px 0;">
+  <div style="position:relative; width:100%; max-width:1000px; height:300px; overflow:hidden; border-radius:10px;">
+      <div class="slideshow">
+        <img class="slide" src="images/kartina99.jpg">
+        <img class="slide" src="images/kartina100.jpg">
+        <img class="slide" src="images/kartina51.jpg">
+        <img class="slide" src="images/kartina107.jpg">
+        <img class="slide" src="images/kartina34.jpg">
+        <img class="slide" src="images/kartina91.jpg">
+        <img class="slide" src="images/kartina72.jpg">
+      </div>
+      <!-- Мягкое затемнение краёв -->
+      <div style="position:absolute; top:0; left:0; right:0; bottom:0; 
+                  pointer-events:none; 
+                  background:radial-gradient(ellipse at center, rgba(0,0,0,0) 70%, rgba(0,0,0,0.35) 100%);">
+      </div>
+  </div>
 </div>
 
-<script>
-  const slides = document.querySelectorAll('.slideshow img');
-  let index = 0;
+<style>
+.slideshow {
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.slide {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  opacity:0;
+  transition:opacity 1s ease-in-out, transform 6s ease-in-out;
+}
+.slide.active {
+  opacity:1;
+  transform:scale(1.05); /* лёгкое дыхание */
+}
+</style>
 
-  setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-  }, 7000); // каждые 7 секунд
+<script>
+let slides = document.querySelectorAll('.slide');
+let current = 0;
+slides[current].classList.add('active');
+
+setInterval(() => {
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}, 5000);
 </script>
 
 
@@ -291,6 +294,7 @@ You step onto a path where the artist is not a mere craftsman, but a Creator, wa
 
 </body>
 </html>
+
 
 
 
