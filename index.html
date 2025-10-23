@@ -185,6 +185,27 @@ button:hover, .button:hover {
     <h1>Семён Чупин</h1>
     <p>Художник • Творец • Выдающийся деятель культуры и Искусства России 2023-2025</p>
   </header>
+  <!-- Слайд-шоу -->
+<div style="text-align:center; margin: 20px 0;">
+    <img id="slideshow" src="images/kartina91.jpg" alt="Море, горизонт" style="width:100%; max-width:1000px;">
+</div>
+
+<script>
+let images = [
+    'images/kartina99.jpg',
+    'images/kartina100.jpg',
+    'images/kartina102.jpg',
+    'images/kartina91.jpg'
+];
+let index = 0;
+let slideshow = document.getElementById('slideshow');
+
+setInterval(() => {
+    index = (index + 1) % images.length;
+    slideshow.src = images[index];
+}, 5000); // меняется каждые 5 секунд
+</script>
+
 
   <main>
     
@@ -251,6 +272,7 @@ button:hover, .button:hover {
 
 </body>
 </html>
+
 
 
 
