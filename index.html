@@ -205,11 +205,13 @@ button:hover, .button:hover {
     opacity: 0;
     transform: scale(1);
     transition: opacity 3s ease-in-out, transform 7s ease-in-out;
+    z-index: 0;
   }
 
   .slideshow img.active {
     opacity: 1;
-    transform: scale(1.05); /* лёгкое приближение */
+    transform: scale(1.05); /* мягкое приближение */
+    z-index: 1;
   }
 </style>
 
@@ -299,6 +301,7 @@ button:hover, .button:hover {
 
 </body>
 </html>
+
 
 
 
