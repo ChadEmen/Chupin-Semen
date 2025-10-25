@@ -15,7 +15,96 @@
   <title>Videos — Semyon Chupin</title>
   <style>
     body {
-      <div style="max-width: 900px; margin: 0 auto; padding: 20px; text-align: center;">
+     
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin: 40px 0 20px;
+      font-size: 32px;
+      color: #ffcc70;
+      text-shadow: 0 0 10px rgba(255,200,100,0.9);
+    }
+
+    .videos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .btn-video {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Color gradients and pulse animations */
+    .insta { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); animation: pulse1 2s infinite; }
+    .tg { background: linear-gradient(45deg,#00aced,#0088cc); animation: pulse2 2.5s infinite; }
+    .vk { background: linear-gradient(45deg,#4c75a3,#81a8c7); animation: pulse3 3s infinite; }
+    .ok { background: linear-gradient(45deg,#ee8208,#ffb347); animation: pulse4 2.2s infinite; }
+    .yt { background: linear-gradient(45deg,#FF0000,#FF6347); animation: pulse5 2.8s infinite; }
+    .dzen { background: linear-gradient(45deg,#ffde00,#f7a600); animation: pulse6 3.2s infinite; }
+    .takt { background: linear-gradient(45deg,#ff4e50,#f9d423); animation: pulse7 2.6s infinite; }
+
+    @keyframes pulse1 {0% {transform: scale(1);} 50% {transform: scale(1.12);} 100% {transform: scale(1);} }
+    @keyframes pulse2 {0% {transform: scale(1);} 50% {transform: scale(1.10);} 100% {transform: scale(1);} }
+    @keyframes pulse3 {0% {transform: scale(1);} 50% {transform: scale(1.14);} 100% {transform: scale(1);} }
+    @keyframes pulse4 {0% {transform: scale(1);} 50% {transform: scale(1.11);} 100% {transform: scale(1);} }
+    @keyframes pulse5 {0% {transform: scale(1);} 50% {transform: scale(1.13);} 100% {transform: scale(1);} }
+    @keyframes pulse6 {0% {transform: scale(1);} 50% {transform: scale(1.15);} 100% {transform: scale(1);} }
+    @keyframes pulse7 {0% {transform: scale(1);} 50% {transform: scale(1.12);} 100% {transform: scale(1);} }
+
+    .btn-video:active { animation: vibrate 0.15s infinite; }
+    @keyframes vibrate {
+      0% { transform: translate(0,0) rotate(0deg);}
+      20% { transform: translate(-2px,2px) rotate(-1deg);}
+      40% { transform: translate(2px,-2px) rotate(1deg);}
+      60% { transform: translate(-2px,2px) rotate(-1deg);}
+      80% { transform: translate(2px,-2px) rotate(1deg);}
+      100% { transform: translate(0,0) rotate(0deg);}
+    }
+
+    .btn-video:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(255,255,255,0.4);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      padding: 8px 15px;
+      font-size: 14px;
+      border-radius: 8px;
+      background: #ffcc70;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <a href="video.html" class="lang-switch">🇷🇺 Russian</a>
+
+  <h1>Video Reports</h1>
+   <div style="max-width: 900px; margin: 0 auto; padding: 20px; text-align: center;">
   <h1 style="font-family: sans-serif; margin-bottom: 30px;">Видео с картинами Семёна Чупина</h1>
 
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -113,94 +202,6 @@
   </div>
 </div>
 
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1 {
-      margin: 40px 0 20px;
-      font-size: 32px;
-      color: #ffcc70;
-      text-shadow: 0 0 10px rgba(255,200,100,0.9);
-    }
-
-    .videos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .btn-video {
-      display: inline-block;
-      padding: 15px 30px;
-      font-size: 20px;
-      font-weight: bold;
-      color: #fff;
-      border-radius: 12px;
-      text-decoration: none;
-      position: relative;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /* Color gradients and pulse animations */
-    .insta { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); animation: pulse1 2s infinite; }
-    .tg { background: linear-gradient(45deg,#00aced,#0088cc); animation: pulse2 2.5s infinite; }
-    .vk { background: linear-gradient(45deg,#4c75a3,#81a8c7); animation: pulse3 3s infinite; }
-    .ok { background: linear-gradient(45deg,#ee8208,#ffb347); animation: pulse4 2.2s infinite; }
-    .yt { background: linear-gradient(45deg,#FF0000,#FF6347); animation: pulse5 2.8s infinite; }
-    .dzen { background: linear-gradient(45deg,#ffde00,#f7a600); animation: pulse6 3.2s infinite; }
-    .takt { background: linear-gradient(45deg,#ff4e50,#f9d423); animation: pulse7 2.6s infinite; }
-
-    @keyframes pulse1 {0% {transform: scale(1);} 50% {transform: scale(1.12);} 100% {transform: scale(1);} }
-    @keyframes pulse2 {0% {transform: scale(1);} 50% {transform: scale(1.10);} 100% {transform: scale(1);} }
-    @keyframes pulse3 {0% {transform: scale(1);} 50% {transform: scale(1.14);} 100% {transform: scale(1);} }
-    @keyframes pulse4 {0% {transform: scale(1);} 50% {transform: scale(1.11);} 100% {transform: scale(1);} }
-    @keyframes pulse5 {0% {transform: scale(1);} 50% {transform: scale(1.13);} 100% {transform: scale(1);} }
-    @keyframes pulse6 {0% {transform: scale(1);} 50% {transform: scale(1.15);} 100% {transform: scale(1);} }
-    @keyframes pulse7 {0% {transform: scale(1);} 50% {transform: scale(1.12);} 100% {transform: scale(1);} }
-
-    .btn-video:active { animation: vibrate 0.15s infinite; }
-    @keyframes vibrate {
-      0% { transform: translate(0,0) rotate(0deg);}
-      20% { transform: translate(-2px,2px) rotate(-1deg);}
-      40% { transform: translate(2px,-2px) rotate(1deg);}
-      60% { transform: translate(-2px,2px) rotate(-1deg);}
-      80% { transform: translate(2px,-2px) rotate(1deg);}
-      100% { transform: translate(0,0) rotate(0deg);}
-    }
-
-    .btn-video:hover {
-      transform: scale(1.15);
-      box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(255,255,255,0.4);
-    }
-
-    .lang-switch {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      padding: 8px 15px;
-      font-size: 14px;
-      border-radius: 8px;
-      background: #ffcc70;
-      color: #111;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-  </style>
-</head>
-<body>
-
-  <a href="video.html" class="lang-switch">🇷🇺 Russian</a>
-
-  <h1>Video Reports</h1>
 
   <div class="videos">
     <a href="https://vk.com/wall39116321_619" target="_blank" class="btn-video insta">Art in Russia — VK Post</a>
@@ -268,6 +269,7 @@
 
 </body>
 </html>
+
 
 
 
